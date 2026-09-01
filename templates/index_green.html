@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Todo App - GREEN</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        margin: 0;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 750px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 14px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #166534;
+      }
+
+      .version {
+        background: #16a34a;
+        color: white;
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .add-form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      input,
+      select {
+        padding: 11px;
+        border: 1px solid #d1d5db;
+        border-radius: 7px;
+      }
+
+      input {
+        flex: 1;
+      }
+
+      button {
+        border: none;
+        padding: 10px 14px;
+        cursor: pointer;
+        border-radius: 7px;
+      }
+
+      .add-button {
+        background: #16a34a;
+        color: white;
+      }
+
+      .filters {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .filters a {
+        text-decoration: none;
+        padding: 8px 14px;
+        border-radius: 7px;
+        background: #e5e7eb;
+        color: #374151;
+      }
+
+      .filters a.active {
+        background: #16a34a;
+        color: white;
+      }
+
+      .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 14px 0;
+      }
+
+      .task-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .task-actions {
+        display: flex;
+        gap: 6px;
+      }
+
+      .complete {
+        background: #22c55e;
+        color: white;
+      }
+
+      .delete {
+        background: #ef4444;
+        color: white;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: #9ca3af;
+      }
+
+      .priority {
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+
+      .priority-alta {
+        background: #fee2e2;
+        color: #b91c1c;
+      }
+
+      .priority-media {
+        background: #fef3c7;
+        color: #92400e;
+      }
+
+      .priority-baja {
+        background: #dcfce7;
+        color: #166534;
+      }
+
+      .empty {
+        text-align: center;
+        color: #6b7280;
+        padding: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Mis tareas</h1>
+
+        <div class="version">{{ version }}</div>
+      </div>
+
+      <form class="add-form" method="POST" action="/add">
+        <input
+          type="text"
+          name="title"
+          placeholder="Escribí una tarea..."
+          required
+        />
+
+        <select name="priority">
+          <option value="baja">Baja</option>
+          <option value="media" selected>Media</option>
+          <option value="alta">Alta</option>
+        </select>
+
+        <button class="add-button">Agregar</button>
+      </form>
+
+      <div class="filters">
+        <a
+          href="/?filter=all"
+          class="{% if current_filter == 'all' %}active{% endif %}"
+        >
+          Todas
+        </a>
+
+        <a
+          href="/?filter=pending"
+          class="{% if current_filter == 'pending' %}active{% endif %}"
+        >
+          Pendientes
+        </a>
+
+        <a
+          href="/?filter=completed"
+          class="{% if current_filter == 'completed' %}active{% endif %}"
+        >
+          Completadas
+        </a>
+      </div>
+
+      {% if tasks %} {% for task in tasks %}
+
+      <div class="task">
+        <div class="task-info">
+          <span class="{% if task.completed %}completed{% endif %}">
+            {{ task.title }}
+          </span>
+
+          <span class="priority priority-{{ task.priority }}">
+            {{ task.priority|capitalize }}
+          </span>
+        </div>
+
+        <div class="task-actions">
+          <form method="POST" action="/complete/{{ task.id }}">
+            <button class="complete">
+              {% if task.completed %} Deshacer {% else %} Completar {% endif %}
+            </button>
+          </form>
+
+          <form method="POST" action="/delete/{{ task.id }}">
+            <button class="delete">Eliminar</button>
+          </form>
+        </div>
+      </div>
+
+      {% endfor %} {% else %}
+
+      <div class="empty">No hay tareas para mostrar.</div>
+
+      {% endif %}
+    </div>
+  </body>
+</html>

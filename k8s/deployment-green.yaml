@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: todo-green # esto
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: todo-app
+      version: green # esto
+
+  template:
+    metadata:
+      labels:
+        app: todo-app
+        version: green # esto
+
+    spec:
+      containers:
+        - name: todo-app
+          image: todo-app:green # cambia esto con respecto al blue
+          imagePullPolicy: Never
+
+          ports:
+            - containerPort: 5000
