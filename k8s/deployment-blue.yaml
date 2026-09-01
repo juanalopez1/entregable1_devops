@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: todo-blue
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: todo-app
+      version: blue
+
+  template:
+    metadata:
+      labels:
+        app: todo-app
+        version: blue # IMPORTANTE !!! aca definimos
+
+    spec:
+      containers:
+        - name: todo-app
+          image: todo-app:blue
+          imagePullPolicy: Never
+
+          ports:
+            - containerPort: 5000
