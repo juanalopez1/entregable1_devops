@@ -4,132 +4,302 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Todo App - BLUE</title>
+    <title>TaskFlow - BLUE v1</title>
 
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f3f4f6;
         margin: 0;
-        padding: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f7fb;
+        color: #1f2937;
       }
 
-      .container {
-        max-width: 650px;
-        margin: auto;
+      .page {
+        width: 100%;
+        max-width: 760px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .app {
         background: white;
-        padding: 30px;
-        border-radius: 12px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
       }
 
-      h1 {
-        color: #2563eb;
+      .header {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: white;
+        padding: 35px;
+      }
+
+      .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 30px;
+      }
+
+      .header p {
+        margin: 8px 0 0;
+        opacity: 0.85;
       }
 
       .version {
-        background: #2563eb;
-        color: white;
-        display: inline-block;
-        padding: 6px 12px;
-        border-radius: 6px;
-        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-weight: bold;
+        font-size: 13px;
+        white-space: nowrap;
       }
 
-      form.add-form {
+      .content {
+        padding: 30px;
+      }
+
+      .add-form {
         display: flex;
         gap: 10px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
       }
 
-      input {
+      .add-form input {
         flex: 1;
-        padding: 10px;
+        min-width: 0;
+        border: 1px solid #dbe2ea;
+        background: #f9fafb;
+        padding: 13px 15px;
+        border-radius: 10px;
+        font-size: 15px;
+        outline: none;
+      }
+
+      .add-form input:focus {
+        border-color: #2563eb;
+        background: white;
       }
 
       button {
         border: none;
+        border-radius: 9px;
         padding: 10px 14px;
         cursor: pointer;
-        border-radius: 6px;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
       }
 
       .add-button {
         background: #2563eb;
         color: white;
+        padding: 0 20px;
+      }
+
+      .section-title {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #9ca3af;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      .tasks {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
 
       .task {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #ddd;
-        padding: 12px 0;
+        justify-content: space-between;
+        gap: 15px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 15px 16px;
+        background: white;
       }
 
-      .task-actions {
-        display: flex;
-        gap: 6px;
-      }
-
-      .complete {
-        background: #22c55e;
-        color: white;
-      }
-
-      .delete {
-        background: #ef4444;
-        color: white;
+      .task-name {
+        font-size: 15px;
+        font-weight: 500;
+        word-break: break-word;
       }
 
       .completed {
         text-decoration: line-through;
-        color: gray;
+        color: #9ca3af;
+      }
+
+      .task-actions {
+        display: flex;
+        gap: 7px;
+        flex-shrink: 0;
+      }
+
+      .complete {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .delete {
+        background: #fee2e2;
+        color: #b91c1c;
+      }
+
+      .empty {
+        text-align: center;
+        padding: 45px 20px;
+        color: #9ca3af;
+        border: 2px dashed #e5e7eb;
+        border-radius: 14px;
+      }
+
+      .empty-icon {
+        font-size: 35px;
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 12px;
+        color: #9ca3af;
+      }
+
+      @media (max-width: 600px) {
+        .page {
+          margin: 25px auto;
+        }
+
+        .header {
+          padding: 25px;
+        }
+
+        .header-top {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .add-form {
+          flex-direction: column;
+        }
+
+        .add-button {
+          padding: 13px;
+        }
+
+        .task {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .task-actions {
+          width: 100%;
+        }
+
+        .task-actions form {
+          flex: 1;
+        }
+
+        .task-actions button {
+          width: 100%;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="version">{{ version }}</div>
+    <div class="page">
+      <div class="app">
+        <header class="header">
+          <div class="header-top">
+            <div>
+              <h1>TaskFlow</h1>
+              <p>Organizá tus tareas de forma simple.</p>
+            </div>
 
-      <h1>Mis tareas</h1>
+            <div class="version">{{ version }}</div>
+          </div>
+        </header>
 
-      <form class="add-form" method="POST" action="/add">
-        <input
-          type="text"
-          name="title"
-          placeholder="Escribí una tarea..."
-          required
-        />
+        <main class="content">
+          <form class="add-form" method="POST" action="/add">
+            <input
+              type="text"
+              name="title"
+              placeholder="¿Qué tenés que hacer?"
+              required
+              autocomplete="off"
+            />
 
-        <button class="add-button">Agregar</button>
-      </form>
-
-      {% if tasks %} {% for task in tasks %}
-
-      <div class="task">
-        <span class="{% if task.completed %}completed{% endif %}">
-          {{ task.title }}
-        </span>
-
-        <div class="task-actions">
-          <form method="POST" action="/complete/{{ task.id }}">
-            <button class="complete">
-              {% if task.completed %} Deshacer {% else %} Completar {% endif %}
-            </button>
+            <button class="add-button" type="submit">+ Agregar</button>
           </form>
 
-          <form method="POST" action="/delete/{{ task.id }}">
-            <button class="delete">Eliminar</button>
-          </form>
-        </div>
+          <div class="section-title">Mis tareas</div>
+
+          {% if tasks %}
+
+          <div class="tasks">
+            {% for task in tasks %}
+
+            <div class="task">
+              <span
+                class="task-name {% if task.completed %}completed{% endif %}"
+              >
+                {{ task.title }}
+              </span>
+
+              <div class="task-actions">
+                <form method="POST" action="/complete/{{ task.id }}">
+                  <button class="complete" type="submit">
+                    {% if task.completed %} Deshacer {% else %} ✓ Completar {%
+                    endif %}
+                  </button>
+                </form>
+
+                <form method="POST" action="/delete/{{ task.id }}">
+                  <button class="delete" type="submit">Eliminar</button>
+                </form>
+              </div>
+            </div>
+
+            {% endfor %}
+          </div>
+
+          {% else %}
+
+          <div class="empty">
+            <div class="empty-icon">✓</div>
+
+            <div>No tenés tareas pendientes.</div>
+          </div>
+
+          {% endif %}
+
+          <div class="footer">TaskFlow · Blue Deployment</div>
+        </main>
       </div>
-
-      {% endfor %} {% else %}
-
-      <p>No hay tareas todavía.</p>
-
-      {% endif %}
     </div>
   </body>
 </html>

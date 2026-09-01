@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Todo App - GREEN</title>
+    <title>TaskFlow - GREEN v2</title>
 
     <style>
       * {
@@ -12,87 +12,154 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f3f4f6;
         margin: 0;
-        padding: 40px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f3f8f5;
+        color: #1f2937;
       }
 
-      .container {
-        max-width: 750px;
-        margin: auto;
+      .page {
+        width: 100%;
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .app {
         background: white;
-        padding: 30px;
-        border-radius: 14px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
       }
 
       .header {
+        background: linear-gradient(135deg, #16a34a, #15803d);
+        color: white;
+        padding: 35px;
+      }
+
+      .header-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        gap: 20px;
       }
 
-      h1 {
+      .header h1 {
         margin: 0;
-        color: #166534;
+        font-size: 30px;
+      }
+
+      .header p {
+        margin: 8px 0 0;
+        opacity: 0.85;
       }
 
       .version {
-        background: #16a34a;
-        color: white;
-        padding: 7px 14px;
-        border-radius: 20px;
-        font-size: 14px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 8px 14px;
+        border-radius: 999px;
         font-weight: bold;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .content {
+        padding: 30px;
       }
 
       .add-form {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 130px auto;
         gap: 10px;
         margin-bottom: 25px;
       }
 
       input,
       select {
-        padding: 11px;
-        border: 1px solid #d1d5db;
-        border-radius: 7px;
+        border: 1px solid #dbe2ea;
+        background: #f9fafb;
+        padding: 13px 15px;
+        border-radius: 10px;
+        font-size: 15px;
+        outline: none;
       }
 
-      input {
-        flex: 1;
+      input:focus,
+      select:focus {
+        border-color: #16a34a;
+        background: white;
       }
 
       button {
         border: none;
+        border-radius: 9px;
         padding: 10px 14px;
         cursor: pointer;
-        border-radius: 7px;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
       }
 
       .add-button {
         background: #16a34a;
         color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #9ca3af;
+        font-weight: bold;
       }
 
       .filters {
         display: flex;
-        gap: 8px;
-        margin-bottom: 20px;
+        gap: 6px;
+        background: #f3f4f6;
+        padding: 4px;
+        border-radius: 10px;
       }
 
       .filters a {
         text-decoration: none;
-        padding: 8px 14px;
+        color: #6b7280;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 8px 12px;
         border-radius: 7px;
-        background: #e5e7eb;
-        color: #374151;
+        transition: 0.2s;
+      }
+
+      .filters a:hover {
+        color: #15803d;
       }
 
       .filters a.active {
-        background: #16a34a;
-        color: white;
+        background: white;
+        color: #15803d;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      }
+
+      .tasks {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
 
       .task {
@@ -100,29 +167,27 @@
         justify-content: space-between;
         align-items: center;
         gap: 15px;
-        border-bottom: 1px solid #e5e7eb;
-        padding: 14px 0;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 15px 16px;
+        transition: 0.2s;
+      }
+
+      .task:hover {
+        border-color: #bbf7d0;
       }
 
       .task-info {
         display: flex;
         align-items: center;
         gap: 10px;
+        min-width: 0;
       }
 
-      .task-actions {
-        display: flex;
-        gap: 6px;
-      }
-
-      .complete {
-        background: #22c55e;
-        color: white;
-      }
-
-      .delete {
-        background: #ef4444;
-        color: white;
+      .task-name {
+        font-size: 15px;
+        font-weight: 500;
+        word-break: break-word;
       }
 
       .completed {
@@ -131,10 +196,13 @@
       }
 
       .priority {
-        font-size: 12px;
-        padding: 4px 8px;
-        border-radius: 10px;
+        font-size: 11px;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        padding: 5px 8px;
+        border-radius: 999px;
+        white-space: nowrap;
       }
 
       .priority-alta {
@@ -152,93 +220,216 @@
         color: #166534;
       }
 
+      .task-actions {
+        display: flex;
+        gap: 7px;
+        flex-shrink: 0;
+      }
+
+      .complete {
+        background: #dcfce7;
+        color: #15803d;
+      }
+
+      .delete {
+        background: #fee2e2;
+        color: #b91c1c;
+      }
+
       .empty {
         text-align: center;
-        color: #6b7280;
-        padding: 30px;
+        padding: 45px 20px;
+        color: #9ca3af;
+        border: 2px dashed #e5e7eb;
+        border-radius: 14px;
+      }
+
+      .empty-icon {
+        font-size: 35px;
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 12px;
+        color: #9ca3af;
+      }
+
+      @media (max-width: 650px) {
+        .page {
+          margin: 25px auto;
+        }
+
+        .header {
+          padding: 25px;
+        }
+
+        .header-top {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .add-form {
+          grid-template-columns: 1fr;
+        }
+
+        .add-button {
+          padding: 13px;
+        }
+
+        .toolbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .filters {
+          width: 100%;
+        }
+
+        .filters a {
+          flex: 1;
+          text-align: center;
+        }
+
+        .task {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .task-info {
+          flex-wrap: wrap;
+        }
+
+        .task-actions {
+          width: 100%;
+        }
+
+        .task-actions form {
+          flex: 1;
+        }
+
+        .task-actions button {
+          width: 100%;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Mis tareas</h1>
+    <div class="page">
+      <div class="app">
+        <header class="header">
+          <div class="header-top">
+            <div>
+              <h1>TaskFlow</h1>
+              <p>Ahora con prioridades y filtros.</p>
+            </div>
 
-        <div class="version">{{ version }}</div>
-      </div>
+            <div class="version">{{ version }}</div>
+          </div>
+        </header>
 
-      <form class="add-form" method="POST" action="/add">
-        <input
-          type="text"
-          name="title"
-          placeholder="Escribí una tarea..."
-          required
-        />
+        <main class="content">
+          <form class="add-form" method="POST" action="/add">
+            <input
+              type="text"
+              name="title"
+              placeholder="¿Qué tenés que hacer?"
+              required
+              autocomplete="off"
+            />
 
-        <select name="priority">
-          <option value="baja">Baja</option>
-          <option value="media" selected>Media</option>
-          <option value="alta">Alta</option>
-        </select>
+            <select name="priority">
+              <option value="baja">Baja</option>
 
-        <button class="add-button">Agregar</button>
-      </form>
+              <option value="media" selected>Media</option>
 
-      <div class="filters">
-        <a
-          href="/?filter=all"
-          class="{% if current_filter == 'all' %}active{% endif %}"
-        >
-          Todas
-        </a>
+              <option value="alta">Alta</option>
+            </select>
 
-        <a
-          href="/?filter=pending"
-          class="{% if current_filter == 'pending' %}active{% endif %}"
-        >
-          Pendientes
-        </a>
-
-        <a
-          href="/?filter=completed"
-          class="{% if current_filter == 'completed' %}active{% endif %}"
-        >
-          Completadas
-        </a>
-      </div>
-
-      {% if tasks %} {% for task in tasks %}
-
-      <div class="task">
-        <div class="task-info">
-          <span class="{% if task.completed %}completed{% endif %}">
-            {{ task.title }}
-          </span>
-
-          <span class="priority priority-{{ task.priority }}">
-            {{ task.priority|capitalize }}
-          </span>
-        </div>
-
-        <div class="task-actions">
-          <form method="POST" action="/complete/{{ task.id }}">
-            <button class="complete">
-              {% if task.completed %} Deshacer {% else %} Completar {% endif %}
-            </button>
+            <button class="add-button" type="submit">+ Agregar</button>
           </form>
 
-          <form method="POST" action="/delete/{{ task.id }}">
-            <button class="delete">Eliminar</button>
-          </form>
-        </div>
+          <div class="toolbar">
+            <div class="section-title">Mis tareas</div>
+
+            <div class="filters">
+              <a
+                href="/?filter=all"
+                class="{% if current_filter == 'all' %}active{% endif %}"
+              >
+                Todas
+              </a>
+
+              <a
+                href="/?filter=pending"
+                class="{% if current_filter == 'pending' %}active{% endif %}"
+              >
+                Pendientes
+              </a>
+
+              <a
+                href="/?filter=completed"
+                class="{% if current_filter == 'completed' %}active{% endif %}"
+              >
+                Completadas
+              </a>
+            </div>
+          </div>
+
+          {% if tasks %}
+
+          <div class="tasks">
+            {% for task in tasks %}
+
+            <div class="task">
+              <div class="task-info">
+                <span
+                  class="task-name {% if task.completed %}completed{% endif %}"
+                >
+                  {{ task.title }}
+                </span>
+
+                <span class="priority priority-{{ task.priority }}">
+                  {{ task.priority }}
+                </span>
+              </div>
+
+              <div class="task-actions">
+                <form method="POST" action="/complete/{{ task.id }}">
+                  <button class="complete" type="submit">
+                    {% if task.completed %} Deshacer {% else %} ✓ Completar {%
+                    endif %}
+                  </button>
+                </form>
+
+                <form method="POST" action="/delete/{{ task.id }}">
+                  <button class="delete" type="submit">Eliminar</button>
+                </form>
+              </div>
+            </div>
+
+            {% endfor %}
+          </div>
+
+          {% else %}
+
+          <div class="empty">
+            <div class="empty-icon">✓</div>
+
+            <div>No hay tareas para mostrar.</div>
+          </div>
+
+          {% endif %}
+
+          <div class="footer">TaskFlow · Green Deployment</div>
+        </main>
       </div>
-
-      {% endfor %} {% else %}
-
-      <div class="empty">No hay tareas para mostrar.</div>
-
-      {% endif %}
     </div>
   </body>
 </html>
