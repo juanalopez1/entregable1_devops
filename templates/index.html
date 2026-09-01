@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Todo App - BLUE</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        margin: 0;
+        padding: 40px;
+      }
+
+      .container {
+        max-width: 650px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        color: #2563eb;
+      }
+
+      .version {
+        background: #2563eb;
+        color: white;
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+      }
+
+      form.add-form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      input {
+        flex: 1;
+        padding: 10px;
+      }
+
+      button {
+        border: none;
+        padding: 10px 14px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+
+      .add-button {
+        background: #2563eb;
+        color: white;
+      }
+
+      .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 12px 0;
+      }
+
+      .task-actions {
+        display: flex;
+        gap: 6px;
+      }
+
+      .complete {
+        background: #22c55e;
+        color: white;
+      }
+
+      .delete {
+        background: #ef4444;
+        color: white;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="version">{{ version }}</div>
+
+      <h1>Mis tareas</h1>
+
+      <form class="add-form" method="POST" action="/add">
+        <input
+          type="text"
+          name="title"
+          placeholder="Escribí una tarea..."
+          required
+        />
+
+        <button class="add-button">Agregar</button>
+      </form>
+
+      {% if tasks %} {% for task in tasks %}
+
+      <div class="task">
+        <span class="{% if task.completed %}completed{% endif %}">
+          {{ task.title }}
+        </span>
+
+        <div class="task-actions">
+          <form method="POST" action="/complete/{{ task.id }}">
+            <button class="complete">
+              {% if task.completed %} Deshacer {% else %} Completar {% endif %}
+            </button>
+          </form>
+
+          <form method="POST" action="/delete/{{ task.id }}">
+            <button class="delete">Eliminar</button>
+          </form>
+        </div>
+      </div>
+
+      {% endfor %} {% else %}
+
+      <p>No hay tareas todavía.</p>
+
+      {% endif %}
+    </div>
+  </body>
+</html>
