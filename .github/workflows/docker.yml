@@ -1,0 +1,17 @@
+name: Docker
+
+on:
+  push:
+    branches:
+      - pipeline-docker
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Construir imagen Docker
+        run: docker build -t todo-app .
