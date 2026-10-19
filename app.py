@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 
+from monitor_client import notify
+
 app = Flask(__name__)
 
 tasks = []
@@ -30,6 +32,7 @@ def add_task():
 
         tasks.append(task)
         next_id += 1
+        notify("create")
 
     return redirect(url_for("index"))
 
@@ -39,6 +42,7 @@ def complete_task(task_id):
     for task in tasks:
         if task["id"] == task_id:
             task["completed"] = not task["completed"]
+            notify("complete")
             break
 
     return redirect(url_for("index"))
@@ -48,7 +52,11 @@ def complete_task(task_id):
 def delete_task(task_id):
     global tasks
 
+    deleted = next((task for task in tasks if task["id"] == task_id), None)
     tasks = [task for task in tasks if task["id"] != task_id]
+
+    if deleted:
+        notify("delete")
 
     return redirect(url_for("index"))
 

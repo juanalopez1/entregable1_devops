@@ -4,3 +4,5 @@ __pycache__
 venv
 .git
 .gitignore
+monitor
+k8s
