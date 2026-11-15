@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
@@ -8,10 +9,20 @@ next_id = 1
 
 @app.route("/")
 def index():
+    task_filter = request.args.get("filter", "all")
+
+    if task_filter == "pending":
+        filtered_tasks = [task for task in tasks if not task["completed"]]
+    elif task_filter == "completed":
+        filtered_tasks = [task for task in tasks if task["completed"]]
+    else:
+        filtered_tasks = tasks
+
     return render_template(
         "index.html",
-        tasks=tasks,
-        version="BLUE v1"
+        tasks=filtered_tasks,
+        current_filter=task_filter,
+        version=os.environ.get("APP_VERSION", "v2")
     )
 
 
@@ -20,11 +31,13 @@ def add_task():
     global next_id
 
     title = request.form.get("title")
+    priority = request.form.get("priority", "media")
 
     if title:
         task = {
             "id": next_id,
             "title": title,
+            "priority": priority,
             "completed": False
         }
 

@@ -1,18 +1,32 @@
-# agarrar imagen de python
-FROM python:3.12-slim
+# ---------- Etapa 1: builder ----------
+# Instala las dependencias en una carpeta aparte (/install)
+FROM python:3.12.7-slim-bookworm AS builder
 
-# crea/usa /app dentro del contenedor.
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
+
+# ---------- Etapa 2: runtime ----------
+# Imagen final: solo Python + dependencias ya instaladas + nuestro código
+FROM python:3.12.7-slim-bookworm
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+# Usuario sin privilegios, con UID numérico
+RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin appuser
+
 WORKDIR /app
 
-# copia las dependencias e instala Flask.
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copiamos solo lo instalado en la etapa 1 (sin caché ni restos de pip)
+COPY --from=builder /install /usr/local
 
-# copia toda nuestra aplicación al contenedor.
-COPY . .
+# Copiamos solo lo que la app necesita para correr
+COPY --chown=appuser:appuser app.py .
+COPY --chown=appuser:appuser templates ./templates
 
-# indica que Flask usa el puerto 5000.
+USER 10001
+
 EXPOSE 5000
 
-# cuando arranca el contenedor ejecuta nuestra aplicación.
 CMD ["python", "app.py"]

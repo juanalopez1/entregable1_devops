@@ -4,3 +4,13 @@ __pycache__
 venv
 .git
 .gitignore
+k8s
+helm-chart
+reports
+grafana
+tests
+scripts
+Jenkinsfile
+README.md
+Dockerfile
+.dockerignore
