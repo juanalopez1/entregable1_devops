@@ -1,0 +1,2 @@
+PENDIENTE: KubeLinter no está instalado en el entorno revisado.
+Comando sugerido: kube-linter lint k8s --format plain

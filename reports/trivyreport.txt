@@ -1,0 +1,3 @@
+PENDIENTE: Trivy no está instalado en el entorno revisado; no se generó un análisis de imagen.
+Comando sugerido después de construir la imagen:
+trivy image --severity HIGH,CRITICAL --format table --output reports/trivyreport.txt todo-app:devsecops
