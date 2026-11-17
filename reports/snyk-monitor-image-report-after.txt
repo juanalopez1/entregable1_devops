@@ -1,0 +1,129 @@
+﻿
+Testing todo-monitor:1.0.2...
+
+✗ Low severity vulnerability found in zlib/zlib
+  Description: CVE-2026-4738
+  Info: https://security.snyk.io/vuln/SNYK-ALPINE323-ZLIB-22265590
+  Introduced through: zlib/zlib@1.3.2-r1
+  From: zlib/zlib@1.3.2-r1
+  Image layer: Introduced by your base image (eclipse-temurin:21.0.13_9-jre-alpine-3.23)
+  Fixed in: 1.4-r0
+
+
+
+Organization:      juanalopez1
+Package manager:   apk
+Target file:       monitor/Dockerfile
+Project name:      docker-image|todo-monitor
+Docker image:      todo-monitor:1.0.2
+Platform:          linux/amd64
+Target OS:         Alpine Linux v3.23
+Base image:        eclipse-temurin:21.0.13_9-jre-alpine-3.23
+Licenses:          enabled
+
+Tested 73 dependencies for known issues, found 1 issue.
+
+According to our scan, you are currently using the most secure version of the selected base image
+
+Pro tip: use `--exclude-base-image-vulns` to exclude from display Docker base image vulnerabilities.
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
+
+Learn more: https://docs.snyk.io/products/snyk-container/getting-around-the-snyk-container-ui/base-image-detection
+
+-------------------------------------------------------
+
+Testing todo-monitor:1.0.2...
+
+Tested 49 dependencies for known issues, found 17 issues.
+
+⚠ Warning! Some dependencies in this project could not be identified.
+
+
+Issues to fix by upgrading:
+
+  Upgrade ch.qos.logback:logback-classic@1.5.36 to ch.qos.logback:logback-classic@1.6.5 to fix
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-JAVA-CHQOSLOGBACK-20824362] in ch.qos.logback:logback-classic@1.5.36
+    introduced by ch.qos.logback:logback-classic@1.5.36
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-JAVA-CHQOSLOGBACK-19882330] in ch.qos.logback:logback-classic@1.5.36
+    introduced by ch.qos.logback:logback-classic@1.5.36
+
+  Upgrade io.micrometer:micrometer-core@1.15.12 to io.micrometer:micrometer-core@1.16.7 to fix
+  ✗ CRLF Injection [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-IOMICROMETER-19233327] in io.micrometer:micrometer-core@1.15.12
+    introduced by io.micrometer:micrometer-core@1.15.12
+  ✗ Missing Release of Memory after Effective Lifetime [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-IOMICROMETER-19256585] in io.micrometer:micrometer-core@1.15.12
+    introduced by io.micrometer:micrometer-core@1.15.12
+
+  Upgrade org.springframework:spring-beans@6.2.19 to org.springframework:spring-beans@7.0.9 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267072] in org.springframework:spring-beans@6.2.19
+    introduced by org.springframework:spring-beans@6.2.19
+
+  Upgrade org.springframework:spring-expression@6.2.19 to org.springframework:spring-expression@7.0.9 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267073] in org.springframework:spring-expression@6.2.19
+    introduced by org.springframework:spring-expression@6.2.19
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267075] in org.springframework:spring-expression@6.2.19
+    introduced by org.springframework:spring-expression@6.2.19
+
+  Upgrade org.springframework:spring-web@6.2.19 to org.springframework:spring-web@7.0.9 to fix
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267076] in org.springframework:spring-web@6.2.19
+    introduced by org.springframework:spring-web@6.2.19
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267077] in org.springframework:spring-web@6.2.19
+    introduced by org.springframework:spring-web@6.2.19
+  ✗ Cross-site Scripting (XSS) [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267078] in org.springframework:spring-web@6.2.19
+    introduced by org.springframework:spring-web@6.2.19
+  ✗ Sensitive Cookie in HTTPS Session Without "Secure" Attribute [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267079] in org.springframework:spring-web@6.2.19
+    introduced by org.springframework:spring-web@6.2.19
+
+  Upgrade org.springframework:spring-webmvc@6.2.19 to org.springframework:spring-webmvc@7.0.9 to fix
+  ✗ Improper Neutralization [Low Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267437] in org.springframework:spring-webmvc@6.2.19
+    introduced by org.springframework:spring-webmvc@6.2.19
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267094] in org.springframework:spring-webmvc@6.2.19
+    introduced by org.springframework:spring-webmvc@6.2.19
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267099] in org.springframework:spring-webmvc@6.2.19
+    introduced by org.springframework:spring-webmvc@6.2.19
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267433] in org.springframework:spring-webmvc@6.2.19
+    introduced by org.springframework:spring-webmvc@6.2.19
+  ✗ Arbitrary Code Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-19267098] in org.springframework:spring-webmvc@6.2.19
+    introduced by org.springframework:spring-webmvc@6.2.19
+
+
+Issues with no direct upgrade or patch:
+  ✗ Improper Validation of Specified Type of Input [Low Severity][https://security.snyk.io/vuln/SNYK-JAVA-JAKARTAVALIDATION-20936881] in jakarta.validation:jakarta.validation-api@3.0.2
+    introduced by jakarta.validation:jakarta.validation-api@3.0.2
+  This issue was fixed in versions: 4.0.0-M1
+
+
+
+Organization:      juanalopez1
+Package manager:   maven
+Target file:       \app
+Project name:      todo-monitor:1.0.2:\app
+Docker image:      todo-monitor:1.0.2
+Licenses:          enabled
+
+Pro tip: use `--exclude-base-image-vulns` to exclude from display Docker base image vulnerabilities.
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
+
+-------------------------------------------------------
+
+Testing todo-monitor:1.0.2...
+
+Organization:      juanalopez1
+Package manager:   maven
+Target file:       \opt\java\openjdk\lib
+Project name:      todo-monitor:1.0.2:\opt\java\openjdk\lib
+Docker image:      todo-monitor:1.0.2
+Licenses:          enabled
+
+✔ Tested todo-monitor:1.0.2 for known issues, no vulnerable paths found.
+
+
+Tested 3 projects, 2 contained vulnerable paths.
+
+
+
