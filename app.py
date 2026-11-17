@@ -1,10 +1,16 @@
 import os
+import secrets
 
 from flask import Flask, render_template, request, redirect, url_for
+from flask_wtf.csrf import CSRFProtect
 
 from monitor_client import notify
 
 app = Flask(__name__)
+# En Kubernetes la clave viene de un Secret (igual en todas las réplicas).
+# Si no está definida (por ejemplo, en local), se genera una al azar.
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY") or secrets.token_hex(32)
+CSRFProtect(app)
 
 tasks = []
 next_id = 1
@@ -76,4 +82,6 @@ def delete_task(task_id):
 
 
 if __name__ == "__main__":
+    # El contenedor debe escuchar en todas sus interfaces; Docker/Kubernetes limita la exposición de red.
+    # nosemgrep: python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host
     app.run(host="0.0.0.0", port=5000)

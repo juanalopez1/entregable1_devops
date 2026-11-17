@@ -1,6 +1,6 @@
 import json
 import os
-from urllib.error import URLError, TimeoutError, OSError
+from urllib.error import URLError
 from urllib.request import Request, urlopen
 
 MONITOR_URL = os.environ.get("MONITOR_URL", "")

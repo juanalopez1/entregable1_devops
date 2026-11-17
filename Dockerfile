@@ -13,6 +13,12 @@ FROM python:3.15.2-slim-bookworm
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
+# Aplica las actualizaciones de seguridad disponibles en Debian.
+# Va en esta etapa (la final): lo que se hace en el builder no llega a la imagen.
+RUN apt-get update \
+    && apt-get upgrade -y --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
 # Usuario sin privilegios, con UID/GID numérico
 RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin appuser
 

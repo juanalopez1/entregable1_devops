@@ -30,6 +30,12 @@ spec:
           envFrom:
             - configMapRef:
                 name: {{ include "todo-app.fullname" . }}
+          env:
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "todo-app.fullname" . }}
+                  key: SECRET_KEY
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           resources:

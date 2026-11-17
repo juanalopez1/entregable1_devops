@@ -19,10 +19,32 @@ spec:
         version: blue # IMPORTANTE !!! aca definimos
 
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        seccompProfile:
+          type: RuntimeDefault
       containers:
         - name: todo-app
-          image: todo-app:blue
-          imagePullPolicy: Never
+          image: mariadeoliveira/todo-app:blue
+          imagePullPolicy: IfNotPresent
+
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 10001
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 128Mi
 
           ports:
             - containerPort: 5000

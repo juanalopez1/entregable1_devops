@@ -176,6 +176,26 @@ En este punto, el Service de Kubernetes dirige el tráfico hacia la versión:
 BLUE v1
 ```
 
+### Acceder usando el cluster institucional (PowerShell)
+
+Configura la ruta al kubeconfig institucional en la ventana de PowerShell donde vas a usar `kubectl`:
+
+```powershell
+$env:KUBECONFIG = "$HOME\.kube\ucu.yaml"
+```
+
+Abre un túnel local hacia el Service:
+
+```powershell
+kubectl port-forward service/todo-service 8089:80
+```
+
+Mientras el comando siga ejecutándose, accede a la aplicación desde el navegador en:
+
+http://localhost:8089
+
+No cierres esa ventana de PowerShell mientras uses el túnel. Para detenerlo, presiona `Ctrl+C`. Si abres otra ventana, vuelve a configurar `KUBECONFIG` en ella.
+
 ---
 
 # Versión GREEN
@@ -372,3 +392,5 @@ Por este motivo, si un Pod es eliminado o reiniciado, las tareas almacenadas en 
 Además, BLUE y GREEN mantienen memorias independientes, ya que son Pods distintos.
 
 Esta decisión fue tomada para mantener el alcance del proyecto enfocado principalmente en Docker, Kubernetes y la estrategia Blue/Green.
+
+---

@@ -1,0 +1,34 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: disallow-root-containers
+spec:
+  validationFailureAction: Enforce
+  background: true
+  rules:
+    - name: require-non-root-user
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      # Falco needs privileged node access to inspect runtime events.
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - falco
+      validate:
+        message: "Los pods deben ejecutarse como usuario no root."
+        pattern:
+          spec:
+            securityContext:
+              runAsNonRoot: true
+            containers:
+              - securityContext:
+                  runAsNonRoot: true
+                  runAsUser: ">0"
+            =(initContainers):
+              - securityContext:
+                  runAsNonRoot: true
+                  runAsUser: ">0"

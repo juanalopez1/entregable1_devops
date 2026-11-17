@@ -335,7 +335,10 @@
         </header>
 
         <main class="content">
+          <!-- Flask-WTF valida globalmente csrf_token en cada solicitud POST. -->
+          <!-- nosemgrep: python.django.security.django-no-csrf-token.django-no-csrf-token -->
           <form class="add-form" method="POST" action="/add">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <input
               type="text"
               name="title"
@@ -401,14 +404,20 @@
               </div>
 
               <div class="task-actions">
+                <!-- Flask-WTF valida globalmente csrf_token en cada solicitud POST. -->
+                <!-- nosemgrep: python.django.security.django-no-csrf-token.django-no-csrf-token -->
                 <form method="POST" action="/complete/{{ task.id }}">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                   <button class="complete" type="submit">
                     {% if task.completed %} Deshacer {% else %} ✓ Completar {%
                     endif %}
                   </button>
                 </form>
 
+                <!-- Flask-WTF valida globalmente csrf_token en cada solicitud POST. -->
+                <!-- nosemgrep: python.django.security.django-no-csrf-token.django-no-csrf-token -->
                 <form method="POST" action="/delete/{{ task.id }}">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                   <button class="delete" type="submit">Eliminar</button>
                 </form>
               </div>

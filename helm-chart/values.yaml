@@ -33,6 +33,11 @@ ingress:
 # Variables de entorno extra para la app (se cargan en el ConfigMap)
 config: {}
 
+# Clave para firmar las sesiones y los tokens CSRF de Flask.
+# Tiene que ser la misma en todas las réplicas. Si queda vacía, Helm genera una al azar.
+# En producción se pasa con: --set secretKey=<valor>
+secretKey: ""
+
 # Recursos: requests = lo que se reserva; limits = el máximo permitido
 resources:
   requests:
@@ -51,7 +56,11 @@ podSecurityContext:
     type: RuntimeDefault
 
 # Seguridad a nivel de contenedor
+# (runAsNonRoot/runAsUser se repiten acá porque la política de Kyverno los exige en cada contenedor)
 securityContext:
+  runAsNonRoot: true
+  runAsUser: 10001
+  runAsGroup: 10001
   allowPrivilegeEscalation: false
   readOnlyRootFilesystem: true
   capabilities:

@@ -1,0 +1,1 @@
+No aplica al código de esta aplicación: no hay dependencias npm (package-lock.json no contiene paquetes). npm no está instalado en el entorno revisado. La aplicación usa Flask; revisar requirements.txt con pip-audit cuando esté disponible.
