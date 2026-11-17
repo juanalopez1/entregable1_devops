@@ -1,0 +1,36 @@
+Snyk dependency scan: Python (requirements.txt)
+
+Testing /var/jenkins_home/workspace/entregable4-pipeline...
+
+Organization:      juanalopez1
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      entregable4-pipeline
+Open source:       no
+Project path:      /var/jenkins_home/workspace/entregable4-pipeline
+Local Snyk policy: found
+Licenses:          enabled
+
+✔ Tested 10 dependencies for known issues, no vulnerable paths found.
+
+Tip: Detected multiple supported manifests (2), use --all-projects to scan all of them at once.
+
+
+
+Snyk dependency scan: Java/Maven (monitor/pom.xml)
+
+Testing /var/jenkins_home/workspace/entregable4-pipeline...
+
+Organization:      juanalopez1
+Package manager:   maven
+Target file:       monitor/pom.xml
+Project name:      com.todo:monitor
+Open source:       no
+Project path:      /var/jenkins_home/workspace/entregable4-pipeline
+Local Snyk policy: found
+Licenses:          enabled
+
+✔ Tested 53 dependencies for known issues, no vulnerable paths found.
+
+Tip: Detected Maven project, are you using modules? Use --maven-aggregate-project to scan each project. Alternatively use --all-projects to scan Maven and other types of projects.
+
