@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kyverno-negative-test
+  namespace: default
+spec: # nosemgrep: yaml.kubernetes.security.run-as-non-root.run-as-non-root
+  # Este pod es deliberadamente no conforme para probar el rechazo de Kyverno.
+  containers:
+    # nosemgrep: yaml.kubernetes.security.allow-privilege-escalation-no-securitycontext.allow-privilege-escalation-no-securitycontext
+    - name: test
+      image: nginx:latest
+      command: ["sleep", "3600"]
