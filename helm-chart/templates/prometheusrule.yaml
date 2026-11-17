@@ -1,0 +1,44 @@
+{{- /*
+Reglas de alerta (vienen del entregable 2, adaptadas al Prometheus Operator).
+Prometheus las evalúa y, si se cumplen, las manda a Alertmanager.
+*/}}
+{{- if and .Values.metrics.prometheusRule.enabled (.Capabilities.APIVersions.Has "monitoring.coreos.com/v1/PrometheusRule") }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "todo-app.fullname" . }}
+  labels:
+    {{- include "todo-app.labels" . | nindent 4 }}
+spec:
+  groups:
+    - name: todo-app
+      rules:
+        - alert: TooManyTaskCreations
+          expr: sum(increase(todo_operations_total{operation="create"}[5m])) > 10
+          for: 15s
+          labels:
+            severity: warning
+          annotations:
+            summary: Se superó el umbral de creaciones de tareas
+            description: Más de 10 creaciones de tareas en los últimos 5 minutos.
+
+        - alert: TooManyHighPriorityCreations
+          expr: sum(increase(todo_operations_total{operation="create",priority="alta"}[5m])) > 5
+          for: 15s
+          labels:
+            severity: warning
+          annotations:
+            summary: Se superó el umbral de tareas de prioridad alta
+            description: Más de 5 creaciones de prioridad alta en los últimos 5 minutos.
+
+        - alert: HighLatency
+          expr: |
+            sum(rate(http_request_duration_seconds_sum[5m]))
+              / sum(rate(http_request_duration_seconds_count[5m])) > 0.5
+          for: 1m
+          labels:
+            severity: warning
+          annotations:
+            summary: Latencia promedio alta
+            description: La latencia promedio de Flask supera los 500 ms.
+{{- end }}

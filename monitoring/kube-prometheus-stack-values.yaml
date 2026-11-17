@@ -1,0 +1,71 @@
+# ============================================================
+# Valores para el chart oficial kube-prometheus-stack
+# (Prometheus Operator + Prometheus + Grafana + Alertmanager +
+#  node-exporter + kube-state-metrics)
+#
+# Instalación:
+#   helm upgrade --install monitoring prometheus-community/kube-prometheus-stack \
+#     --version 87.19.2 -n monitoring --create-namespace \
+#     -f monitoring/kube-prometheus-stack-values.yaml
+# ============================================================
+
+# Nombres cortos: monitoring-prometheus, monitoring-grafana, ...
+fullnameOverride: monitoring
+
+# En Minikube estos componentes del plano de control no exponen métricas
+# hacia afuera: se desactivan para que no aparezcan como targets caídos
+kubeEtcd:
+  enabled: false
+kubeScheduler:
+  enabled: false
+kubeControllerManager:
+  enabled: false
+kubeProxy:
+  enabled: false
+
+prometheus:
+  prometheusSpec:
+    # Tomar los ServiceMonitor y PrometheusRule de cualquier namespace y release
+    # (por defecto solo toma los creados por este mismo chart)
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+    scrapeInterval: 15s
+    evaluationInterval: 15s
+    retention: 2d
+    resources:
+      requests:
+        cpu: 200m
+        memory: 512Mi
+      limits:
+        cpu: "1"
+        memory: 1Gi
+
+alertmanager:
+  alertmanagerSpec:
+    resources:
+      requests:
+        cpu: 50m
+        memory: 64Mi
+      limits:
+        cpu: 200m
+        memory: 128Mi
+
+grafana:
+  # La contraseña de admin se pasa al instalar (--set grafana.adminPassword=...),
+  # nunca queda escrita en el repositorio
+  adminUser: admin
+  # Busca dashboards en ConfigMaps con la etiqueta grafana_dashboard=1 en todos los namespaces
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+      labelValue: "1"
+      searchNamespace: ALL
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi

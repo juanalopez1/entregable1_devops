@@ -1,0 +1,40 @@
+{{- /*
+ServiceMonitor: le dice a Prometheus (Prometheus Operator) qué Services
+scrapear, en qué puerto y en qué ruta. Solo se crea si el cluster tiene
+instalado el Prometheus Operator (el CRD ServiceMonitor existe).
+*/}}
+{{- if and .Values.metrics.serviceMonitor.enabled (.Capabilities.APIVersions.Has "monitoring.coreos.com/v1/ServiceMonitor") }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "todo-app.fullname" . }}
+  labels:
+    {{- include "todo-app.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "todo-app.selectorLabels" . | nindent 6 }}
+  endpoints:
+    # Flask: métricas técnicas (RPS, latencia) y de negocio (tareas)
+    - port: http
+      path: /metrics
+      interval: {{ .Values.metrics.serviceMonitor.interval }}
+{{- if .Values.monitor.enabled }}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "todo-app.monitor.fullname" . }}
+  labels:
+    {{- include "todo-app.monitor.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "todo-app.monitor.selectorLabels" . | nindent 6 }}
+  endpoints:
+    # Monitor (Spring Boot + Micrometer): operaciones de tareas
+    - port: http
+      path: /actuator/prometheus
+      interval: {{ .Values.metrics.serviceMonitor.interval }}
+{{- end }}
+{{- end }}

@@ -67,6 +67,16 @@ monitor:
       cpu: 500m
       memory: 512Mi
 
+# ============================================================
+# Monitoreo (requiere el Prometheus Operator: kube-prometheus-stack)
+# ============================================================
+metrics:
+  serviceMonitor:
+    enabled: true
+    interval: 15s
+  prometheusRule:
+    enabled: true
+
 # Seguridad a nivel de pod (se aplica a los dos componentes)
 podSecurityContext:
   runAsNonRoot: true
