@@ -1,14 +1,25 @@
 # Política de Snyk para el monitor (Spring Boot).
-# Documenta la vulnerabilidad crítica aceptada (ver reports/image-analysis.md).
+
+# Documenta las vulnerabilidades críticas aceptadas (ver reports/image-analysis.md y README).
+
 # El pipeline corta ante cualquier otra vulnerabilidad crítica.
+
 version: v1.25.0
 ignore:
-  SNYK-JAVA-ORGSPRINGFRAMEWORK-19267098:
-    - '*':
-        reason: >-
-          spring-webmvc 6.2.x: solo se corrige en Spring Framework 7 (Spring Boot 4),
-          cambio de versión mayor. Mitigación: el monitor no tiene Ingress (Service
-          ClusterIP, solo lo usan Flask y Prometheus) y corre como usuario no root.
-        expires: 2027-02-28T00:00:00.000Z
-        created: 2026-11-17T00:00:00.000Z
+SNYK-JAVA-ORGSPRINGFRAMEWORK-19267098: - '_':
+reason: >-
+spring-webmvc 6.2.x: solo se corrige en Spring Framework 7 (Spring Boot 4),
+cambio de versión mayor. Mitigación: el monitor no tiene Ingress (Service
+ClusterIP, solo lo usan Flask y Prometheus) y corre como usuario no root.
+expires: 2027-02-28T00:00:00.000Z
+created: 2026-11-17T00:00:00.000Z
+SNYK-UPSTREAM-OPENJDKJRE-22576909: - '_':
+reason: >-
+RCE en openjdk-jre 21.0.13, publicada el 17/11/2026 y detectada por el pipeline
+(build #5). No hay versión corregida del JRE ni de la imagen base todavía
+(Snyk: "most secure version of the selected base image"). Mitigación: el
+monitor no está expuesto fuera del cluster, corre como no root y con sistema
+de archivos de solo lectura. Vencimiento corto para actualizar cuando salga el parche.
+expires: 2026-12-17T00:00:00.000Z
+created: 2026-11-17T00:00:00.000Z
 patch: {}
