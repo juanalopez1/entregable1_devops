@@ -96,3 +96,29 @@ def test_csrf_rechaza_post_sin_token():
     with app_module.app.test_client() as test_client:
         response = test_client.post("/add", data={"title": "Ataque CSRF"})
     assert response.status_code == 400
+
+
+def test_healthz(client):
+    response = client.get("/healthz")
+    assert response.status_code == 200
+    assert response.get_json() == {"status": "ok"}
+
+
+def test_metrics_expone_metricas(client):
+    client.get("/")
+    client.post("/add", data={"title": "Tarea", "priority": "alta"})
+
+    response = client.get("/metrics")
+    body = response.data.decode()
+
+    assert response.status_code == 200
+    assert "http_requests_total" in body
+    assert "http_request_duration_seconds" in body
+    assert 'todo_tasks_created_total{priority="alta"}' in body
+    assert 'todo_tasks{state="pending"} 1.0' in body
+
+
+def test_metrics_no_se_mide_a_si_mismo(client):
+    client.get("/metrics")
+    body = client.get("/metrics").data.decode()
+    assert 'endpoint="/metrics"' not in body

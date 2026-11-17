@@ -1,8 +1,10 @@
 import os
 import secrets
+import time
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, Response, g, render_template, request, redirect, url_for
 from flask_wtf.csrf import CSRFProtect
+from prometheus_client import CONTENT_TYPE_LATEST, Counter, Gauge, Histogram, generate_latest
 
 from monitor_client import notify
 
@@ -15,6 +17,76 @@ CSRFProtect(app)
 tasks = []
 next_id = 1
 
+# ============================================================
+# Métricas para Prometheus (se exponen en /metrics)
+# ============================================================
+
+# Técnicas: cantidad de peticiones (RPS) y cuánto tardan (latencia)
+HTTP_REQUESTS = Counter(
+    "http_requests_total",
+    "Peticiones HTTP procesadas por la aplicación",
+    ["method", "endpoint", "status"],
+)
+HTTP_LATENCY = Histogram(
+    "http_request_duration_seconds",
+    "Tiempo de respuesta de las peticiones HTTP",
+    ["method", "endpoint"],
+)
+
+# De negocio: tareas creadas por prioridad y tareas actuales por estado
+TASKS_CREATED = Counter(
+    "todo_tasks_created_total",
+    "Tareas creadas",
+    ["priority"],
+)
+TASKS_CURRENT = Gauge(
+    "todo_tasks",
+    "Tareas que hay en este momento, por estado",
+    ["state"],
+)
+
+PRIORITIES = {"baja", "media", "alta"}
+
+# Endpoints que no se miden, para que Prometheus y las probes de Kubernetes
+# no inflen las métricas de tráfico real
+NOT_MEASURED = {"/metrics", "/healthz"}
+
+
+@app.before_request
+def start_timer():
+    g.start_time = time.perf_counter()
+
+
+@app.after_request
+def record_metrics(response):
+    # Se usa la ruta "plantilla" (/complete/<int:task_id>) y no la URL real,
+    # para no crear una serie de métricas distinta por cada id de tarea
+    endpoint = request.url_rule.rule if request.url_rule else "unmatched"
+
+    if endpoint not in NOT_MEASURED:
+        HTTP_REQUESTS.labels(request.method, endpoint, str(response.status_code)).inc()
+        if "start_time" in g:
+            HTTP_LATENCY.labels(request.method, endpoint).observe(time.perf_counter() - g.start_time)
+
+    return response
+
+
+@app.route("/metrics")
+def metrics():
+    TASKS_CURRENT.labels("pending").set(sum(1 for task in tasks if not task["completed"]))
+    TASKS_CURRENT.labels("completed").set(sum(1 for task in tasks if task["completed"]))
+    return Response(generate_latest(), mimetype=CONTENT_TYPE_LATEST)
+
+
+@app.route("/healthz")
+def healthz():
+    # Lo usan las probes de Kubernetes (liveness y readiness)
+    return {"status": "ok"}
+
+
+# ============================================================
+# Aplicación
+# ============================================================
 
 @app.route("/")
 def index():
@@ -52,6 +124,7 @@ def add_task():
 
         tasks.append(task)
         next_id += 1
+        TASKS_CREATED.labels(priority if priority in PRIORITIES else "otra").inc()
         notify("create", priority)
 
     return redirect(url_for("index"))

@@ -89,7 +89,8 @@ securityContext:
 
 # Chequeos de salud
 probes:
-  path: /
+  # Endpoint liviano solo para salud (no se cuenta en las métricas de tráfico)
+  path: /healthz
   livenessProbe:
     initialDelaySeconds: 5
     periodSeconds: 10
