@@ -1,0 +1,33 @@
+Validación de políticas Kyverno — rama entregable4
+Clúster: Minikube; namespace de prueba: default.
+
+Políticas aplicadas y estado Ready:
+Warning: kyverno.io/v1 ClusterPolicy is deprecated and will be removed in a future release; migrate to ValidatingPolicy, MutatingPolicy, GeneratingPolicy or ImageValidatingPolicy (policies.kyverno.io), see https://kyverno.io/docs/guides/migration-to-cel/
+NAME                               ADMISSION   BACKGROUND   READY   AGE   MESSAGE
+disallow-latest-tag                true        true         True    12h   Ready
+disallow-root-containers           true        true         True    12h   Ready
+require-container-resources        true        true         True    12h   Ready
+require-readonly-root-filesystem   true        true         True    2s    Ready
+
+
+Manifiesto no conforme: k8s/noncompliant-pod.yaml
+Comando: kubectl apply -f k8s/noncompliant-pod.yaml
+Código de salida esperado (rechazo): 1
+Resultado del admission webhook:
+Error from server: error when creating "k8s/noncompliant-pod.yaml": admission webhook "validate.kyverno.svc-fail" denied the request: 
+
+resource Pod/default/kyverno-negative-test was blocked due to the following policies 
+
+disallow-latest-tag:
+  require-explicit-non-latest-image-tags: 'validation failure: validation error: No se permite usar imágenes con la etiqueta latest. rule require-explicit-non-latest-image-tags failed at path /image/'
+disallow-root-containers:
+  require-non-root-user: 'validation error: Los pods deben ejecutarse como usuario no root. rule require-non-root-user failed at path /spec/containers/0/securityContext/'
+require-container-resources:
+  require-requests-and-limits: 'validation error: Todos los contenedores deben definir requests y limits de CPU y memoria. rule require-requests-and-limits failed at path /spec/containers/0/resources/limits/'
+require-readonly-root-filesystem:
+  require-readonly-root-filesystem: 'validation error: Todos los contenedores deben tener readOnlyRootFilesystem: true. rule require-readonly-root-filesystem failed at path /spec/containers/0/securityContext/'
+
+
+Comprobación de que el pod no fue creado (kubectl get pod kyverno-negative-test; salida 1):
+Error from server (NotFound): pods "kyverno-negative-test" not found
+

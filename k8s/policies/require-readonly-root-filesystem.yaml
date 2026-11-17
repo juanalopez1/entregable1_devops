@@ -1,0 +1,30 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-readonly-root-filesystem
+spec:
+  validationFailureAction: Enforce
+  background: true
+  rules:
+    - name: require-readonly-root-filesystem
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      # Falco necesita inspeccionar el host; las cargas de aplicación siguen sujetas a la política.
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - falco
+      validate:
+        message: "Todos los contenedores deben tener readOnlyRootFilesystem: true."
+        pattern:
+          spec:
+            containers:
+              - securityContext:
+                  readOnlyRootFilesystem: true
+            =(initContainers):
+              - securityContext:
+                  readOnlyRootFilesystem: true

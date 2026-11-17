@@ -43,23 +43,26 @@ pipeline {
         stage('2. Análisis estático (Semgrep)') {
             steps {
                 // Reglas de seguridad para Python y Flask del registro de Semgrep.
-                // --error: el pipeline falla si hay hallazgos de severidad ERROR.
+                // Semgrep genera el informe y hace fallar esta etapa ante hallazgos.
                 sh '''
+                    set +e
                     semgrep scan \
                       --config p/python \
                       --config p/flask \
-                      --severity ERROR \
                       --error \
                       --metrics=off \
-                      --text-output="$REPORTS/semgrep.txt" \
-                      app.py monitor_client.py
+                      app.py monitor_client.py tests/test_app.py > "$REPORTS/semgrep.txt" 2>&1
+                    rc=$?
+                    cat "$REPORTS/semgrep.txt"
+                    cp "$REPORTS/semgrep.txt" reports/semgrep-report.txt
+                    exit $rc
                 '''
             }
         }
 
         stage('3. Dependencias (Snyk)') {
             steps {
-                // Flask: Snyk necesita las dependencias instaladas para analizarlas
+                // Analiza dependencias Python y Maven y conserva el informe solicitado.
                 sh '''
                     python3 -m venv .venv
                     . .venv/bin/activate
@@ -68,19 +71,19 @@ pipeline {
                     set +e
                     snyk test --file=requirements.txt --package-manager=pip \
                       --severity-threshold=critical > "$REPORTS/snyk-app-deps.txt" 2>&1
-                    rc=$?
-                    cat "$REPORTS/snyk-app-deps.txt"
-                    exit $rc
-                '''
-                // Monitor: dependencias de Maven (pom.xml).
-                // monitor/.snyk documenta la vulnerabilidad crítica aceptada.
-                sh '''
-                    set +e
+                    rc1=$?
                     snyk test --file=monitor/pom.xml --policy-path=monitor \
                       --severity-threshold=critical > "$REPORTS/snyk-monitor-deps.txt" 2>&1
-                    rc=$?
-                    cat "$REPORTS/snyk-monitor-deps.txt"
-                    exit $rc
+                    rc2=$?
+                    {
+                      echo 'Snyk dependency scan: Python (requirements.txt)'
+                      cat "$REPORTS/snyk-app-deps.txt"
+                      echo
+                      echo 'Snyk dependency scan: Java/Maven (monitor/pom.xml)'
+                      cat "$REPORTS/snyk-monitor-deps.txt"
+                    } > reports/snyk-report.txt
+                    cat reports/snyk-report.txt
+                    [ $rc1 -eq 0 ] && [ $rc2 -eq 0 ]
                 '''
             }
         }
@@ -153,7 +156,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'reports/pipeline/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/semgrep-report.txt,reports/snyk-report.txt,reports/pipeline/**,reports/kyverno-validation.log,reports/falco-event.log', allowEmptyArchive: true
             sh 'docker logout || true'
             cleanWs()
         }
