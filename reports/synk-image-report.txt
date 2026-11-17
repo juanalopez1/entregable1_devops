@@ -1,0 +1,2486 @@
+﻿
+Testing todo-app:1.0.0...
+
+Ô£ù Low severity vulnerability found in zlib/zlib1g
+  Description: Improper Validation of Specified Quantity in Input
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-ZLIB-15307852
+  Introduced through: zlib/zlib1g@1:1.2.13.dfsg-1, util-linux@2.38.1-5+deb12u2, apt@2.6.1, readline/libreadline8@8.2-1.3
+  From: zlib/zlib1g@1:1.2.13.dfsg-1
+  From: util-linux@2.38.1-5+deb12u2 > zlib/zlib1g@1:1.2.13.dfsg-1
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > zlib/zlib1g@1:1.2.13.dfsg-1
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in xz-utils/liblzma5
+  Description: Race Condition
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-XZUTILS-9652973
+  Introduced through: xz-utils/liblzma5@5.4.1-0.2, apt@2.6.1, readline/libreadline8@8.2-1.3
+  From: xz-utils/liblzma5@5.4.1-0.2
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > xz-utils/liblzma5@5.4.1-0.2
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1 > xz-utils/liblzma5@5.4.1-0.2
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.4.1-1
+
+Ô£ù Low severity vulnerability found in util-linux/libblkid1
+  Description: Out-of-bounds Read
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-14200592
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in util-linux/libblkid1
+  Description: Time-of-check Time-of-use (TOCTOU)
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-15922812
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in util-linux/libblkid1
+  Description: Time-of-check Time-of-use (TOCTOU)
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-17366407
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in util-linux/libblkid1
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-17366432
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in util-linux/libblkid1
+  Description: Information Exposure
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-2401083
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in tar
+  Description: CVE-2005-2541
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-TAR-1560620
+  Introduced through: readline/libreadline8@8.2-1.3
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in tar
+  Description: Unrestricted Upload of File with Dangerous Type
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-TAR-15962844
+  Introduced through: readline/libreadline8@8.2-1.3
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in tar
+  Description: Link Following
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-TAR-18515589
+  Introduced through: readline/libreadline8@8.2-1.3
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in tar
+  Description: Time-of-check Time-of-use (TOCTOU)
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-TAR-18515590
+  Introduced through: readline/libreadline8@8.2-1.3
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Link Following
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-1560739
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Improper Privilege Management
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-15792485
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 252.39-1~deb12u2
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Incorrect Resource Transfer Between Spheres
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-16009478
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Use of Less Trusted Source
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-16009482
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 252.39-1~deb12u2
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Incorrect Resource Transfer Between Spheres
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-16009491
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 252.39-1~deb12u2
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: CVE-2026-16742
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-18867640
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: CVE-2026-15059
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-18913922
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Improper Validation of Integrity Check Value
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-5733385
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Improper Validation of Integrity Check Value
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-5733390
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in systemd/libsystemd0
+  Description: Improper Validation of Integrity Check Value
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-5733398
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: CVE-2025-7458
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-11191064
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: CVE-2025-7709
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-12549231
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: CVE-2025-70873
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-15682563
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Out-of-bounds Read
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-17334394
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Heap-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-17334396
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: CVE-2026-50812
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-17975832
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: CVE-2026-50813
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-17975834
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Incorrect Authorization
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119095
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Memory Leak
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-2407042
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-9685297
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in shadow/passwd
+  Description: Access Restriction Bypass
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SHADOW-1559391
+  Introduced through: shadow/passwd@1:4.13+dfsg1-1+b1, adduser@3.134, shadow/login@1:4.13+dfsg1-1+b1
+  From: shadow/passwd@1:4.13+dfsg1-1+b1
+  From: adduser@3.134 > shadow/passwd@1:4.13+dfsg1-1+b1
+  From: shadow/login@1:4.13+dfsg1-1+b1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in shadow/passwd
+  Description: Arbitrary Code Injection
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SHADOW-5423923
+  Introduced through: shadow/passwd@1:4.13+dfsg1-1+b1, adduser@3.134, shadow/login@1:4.13+dfsg1-1+b1
+  From: shadow/passwd@1:4.13+dfsg1-1+b1
+  From: adduser@3.134 > shadow/passwd@1:4.13+dfsg1-1+b1
+  From: shadow/login@1:4.13+dfsg1-1+b1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1:4.13+dfsg1-1+deb12u1
+
+Ô£ù Low severity vulnerability found in shadow/passwd
+  Description: CVE-2024-56433
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SHADOW-8551160
+  Introduced through: shadow/passwd@1:4.13+dfsg1-1+b1, adduser@3.134, shadow/login@1:4.13+dfsg1-1+b1
+  From: shadow/passwd@1:4.13+dfsg1-1+b1
+  From: adduser@3.134 > shadow/passwd@1:4.13+dfsg1-1+b1
+  From: shadow/login@1:4.13+dfsg1-1+b1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in sed
+  Description: Time-of-check Time-of-use (TOCTOU)
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SED-16114942
+  Introduced through: sed@4.9-1
+  From: sed@4.9-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 4.9-1+deb12u1
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2025-40909
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-10244568
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u3
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: Link Following
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-1556505
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-9538
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17037423
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-48962
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17082606
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2025-15649
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17082653
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-48959
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17082656
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-7010
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17167996
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-12087
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17345868
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-7017
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17882233
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-57433
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17960059
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-15534
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-18600693
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-19487
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-18780206
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: CVE-2026-82560
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-19957672
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-5489184
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in perl/perl-base
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-9689899
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u2
+
+Ô£ù Low severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Improper Protection of Alternate Path
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PCRE2-19540359
+  Introduced through: grep@3.8-5, readline/libreadline8@8.2-1.3
+  From: grep@3.8-5 > pcre2/libpcre2-8-0@10.42-1
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > libselinux/libselinux1@3.4-1+b6 > pcre2/libpcre2-8-0@10.42-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 10.42-1+deb12u1
+
+Ô£ù Low severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PCRE2-20341654
+  Introduced through: grep@3.8-5, readline/libreadline8@8.2-1.3
+  From: grep@3.8-5 > pcre2/libpcre2-8-0@10.42-1
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > libselinux/libselinux1@3.4-1+b6 > pcre2/libpcre2-8-0@10.42-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 10.42-1+deb12u2
+
+Ô£ù Low severity vulnerability found in pam/libpam0g
+  Description: CVE-2026-54411
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PAM-17339904
+  Introduced through: pam/libpam0g@1.5.2-6+deb12u1, shadow/login@1:4.13+dfsg1-1+b1, util-linux@2.38.1-5+deb12u2, adduser@3.134, pam/libpam-modules-bin@1.5.2-6+deb12u1, pam/libpam-modules@1.5.2-6+deb12u1, pam/libpam-runtime@1.5.2-6+deb12u1
+  From: pam/libpam0g@1.5.2-6+deb12u1
+  From: shadow/login@1:4.13+dfsg1-1+b1 > pam/libpam0g@1.5.2-6+deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > pam/libpam0g@1.5.2-6+deb12u1
+  and 11 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in pam/libpam0g
+  Description: Insecure Storage of Sensitive Information
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PAM-8303301
+  Introduced through: pam/libpam0g@1.5.2-6+deb12u1, shadow/login@1:4.13+dfsg1-1+b1, util-linux@2.38.1-5+deb12u2, adduser@3.134, pam/libpam-modules-bin@1.5.2-6+deb12u1, pam/libpam-modules@1.5.2-6+deb12u1, pam/libpam-runtime@1.5.2-6+deb12u1
+  From: pam/libpam0g@1.5.2-6+deb12u1
+  From: shadow/login@1:4.13+dfsg1-1+b1 > pam/libpam0g@1.5.2-6+deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > pam/libpam0g@1.5.2-6+deb12u1
+  and 11 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in p11-kit/libp11-kit0
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-P11KIT-17690397
+  Introduced through: p11-kit/libp11-kit0@0.24.1-2, apt@2.6.1
+  From: p11-kit/libp11-kit0@0.24.1-2
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3 > p11-kit/libp11-kit0@0.24.1-2
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in p11-kit/libp11-kit0
+  Description: Heap-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-P11KIT-18582983
+  Introduced through: p11-kit/libp11-kit0@0.24.1-2, apt@2.6.1
+  From: p11-kit/libp11-kit0@0.24.1-2
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3 > p11-kit/libp11-kit0@0.24.1-2
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-27587
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-10378963
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-9232
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-13174593
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.17-1~deb12u3
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-9230
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-13174597
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.17-1~deb12u3
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-68160
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123161
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-22795
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123167
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-15467
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123189
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-69419
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123196
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-69418
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123200
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-69420
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123207
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-22796
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123215
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-31790
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15969310
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.19-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-42770
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269359
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-45446
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269361
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-42767
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269375
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u1
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-9076
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269380
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-34182
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269382
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-34180
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269398
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-45447
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269407
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-42766
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269418
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-45445
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269419
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-7383
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-17269425
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.20-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-75803
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-19134258
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u1
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-54874
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-19257786
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u1
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-63072
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-19257787
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u1
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-63074
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-19257807
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u1
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-63076
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-19257810
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u1
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-75806
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-20267491
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-77696
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-20267500
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-75805
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-20267503
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-54872
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-20267511
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-35189
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-20267520
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-84782
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-20267524
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.22-1~deb12u2
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-88822
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-22403610
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-95691
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-22403612
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-88823
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-22403616
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-95692
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-22403619
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-107496
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-22403623
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2024-13176
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-8648323
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.16-1~deb12u1
+
+Ô£ù Low severity vulnerability found in ncurses/libtinfo6
+  Description: Out-of-Bounds
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-NCURSES-10378956
+  Introduced through: ncurses/libtinfo6@6.4-4, bash/bash@5.2.15-2+b7, ncurses/libncursesw6@6.4-4, ncurses/ncurses-bin@6.4-4, readline/libreadline8@8.2-1.3, util-linux@2.38.1-5+deb12u2, ncurses/ncurses-base@6.4-4
+  From: ncurses/libtinfo6@6.4-4
+  From: bash/bash@5.2.15-2+b7 > ncurses/libtinfo6@6.4-4
+  From: ncurses/libncursesw6@6.4-4 > ncurses/libtinfo6@6.4-4
+  and 6 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in ncurses/libtinfo6
+  Description: Stack-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-NCURSES-15762836
+  Introduced through: ncurses/libtinfo6@6.4-4, bash/bash@5.2.15-2+b7, ncurses/libncursesw6@6.4-4, ncurses/ncurses-bin@6.4-4, readline/libreadline8@8.2-1.3, util-linux@2.38.1-5+deb12u2, ncurses/ncurses-base@6.4-4
+  From: ncurses/libtinfo6@6.4-4
+  From: bash/bash@5.2.15-2+b7 > ncurses/libtinfo6@6.4-4
+  From: ncurses/libncursesw6@6.4-4 > ncurses/libtinfo6@6.4-4
+  and 6 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in ncurses/libtinfo6
+  Description: CVE-2023-50495
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-NCURSES-6123823
+  Introduced through: ncurses/libtinfo6@6.4-4, bash/bash@5.2.15-2+b7, ncurses/libncursesw6@6.4-4, ncurses/ncurses-bin@6.4-4, readline/libreadline8@8.2-1.3, util-linux@2.38.1-5+deb12u2, ncurses/ncurses-base@6.4-4
+  From: ncurses/libtinfo6@6.4-4
+  From: bash/bash@5.2.15-2+b7 > ncurses/libtinfo6@6.4-4
+  From: ncurses/libncursesw6@6.4-4 > ncurses/libtinfo6@6.4-4
+  and 6 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in libtasn1-6
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBTASN16-14906061
+  Introduced through: libtasn1-6@4.19.0-2, apt@2.6.1
+  From: libtasn1-6@4.19.0-2
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3 > libtasn1-6@4.19.0-2
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in libgcrypt20
+  Description: Use of a Broken or Risky Cryptographic Algorithm
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBGCRYPT20-1550206
+  Introduced through: libgcrypt20@1.10.1-3, apt@2.6.1
+  From: libgcrypt20@1.10.1-3
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > libgcrypt20@1.10.1-3
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1 > libgcrypt20@1.10.1-3
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in libgcrypt20
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBGCRYPT20-16135008
+  Introduced through: libgcrypt20@1.10.1-3, apt@2.6.1
+  From: libgcrypt20@1.10.1-3
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > libgcrypt20@1.10.1-3
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1 > libgcrypt20@1.10.1-3
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.10.1-3+deb12u1
+
+Ô£ù Low severity vulnerability found in libgcrypt20
+  Description: Covert Timing Channel
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBGCRYPT20-6405981
+  Introduced through: libgcrypt20@1.10.1-3, apt@2.6.1
+  From: libgcrypt20@1.10.1-3
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > libgcrypt20@1.10.1-3
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1 > libgcrypt20@1.10.1-3
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in libcap2
+  Description: CVE-2025-1390
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBCAP2-8732577
+  Introduced through: libcap2@1:2.66-4, apt@2.6.1
+  From: libcap2@1:2.66-4
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1 > libcap2@1:2.66-4
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1:2.66-4+deb12u1
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-1549480
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: Integer Underflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-17320739
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: NULL Pointer Dereference
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-20677535
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: NULL Pointer Dereference
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-20677553
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: CVE-2026-107884
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398887
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: CVE-2026-107364
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398898
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: CVE-2026-71200
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398906
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: CVE-2026-111423
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398912
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: CVE-2026-71199
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398928
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: CVE-2026-118380
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398935
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: CVE-2024-26461
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-6277411
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: Memory Leak
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-6277412
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in krb5/libkrb5support0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-8679228
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.20.1-2+deb12u3
+
+Ô£ù Low severity vulnerability found in gzip
+  Description: Buffer Over-read
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GZIP-17681795
+  Introduced through: gzip@1.12-1
+  From: gzip@1.12-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gzip
+  Description: Insecure Temporary File
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GZIP-17681825
+  Introduced through: gzip@1.12-1
+  From: gzip@1.12-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Input Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-1547121
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: Information Exposure
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344316
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: CVE-2026-95209
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-20675578
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: CVE-2026-88647
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-20675579
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: CVE-2026-88648
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-20675584
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: CVE-2026-95184
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-20675585
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: CVE-2026-67693
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-20675603
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnutls28/libgnutls30
+  Description: CVE-2026-95210
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-20675608
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnupg2/gpgv
+  Description: Improper Verification of Cryptographic Signature
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUPG2-14723296
+  Introduced through: gnupg2/gpgv@2.2.40-1.1, apt@2.6.1
+  From: gnupg2/gpgv@2.2.40-1.1
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnupg2/gpgv
+  Description: CVE-2026-57062
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUPG2-17431862
+  Introduced through: gnupg2/gpgv@2.2.40-1.1, apt@2.6.1
+  From: gnupg2/gpgv@2.2.40-1.1
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnupg2/gpgv
+  Description: Symlink Following
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUPG2-20514798
+  Introduced through: gnupg2/gpgv@2.2.40-1.1, apt@2.6.1
+  From: gnupg2/gpgv@2.2.40-1.1
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnupg2/gpgv
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUPG2-3330747
+  Introduced through: gnupg2/gpgv@2.2.40-1.1, apt@2.6.1
+  From: gnupg2/gpgv@2.2.40-1.1
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gnupg2/gpgv
+  Description: CVE-2025-30258
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUPG2-9486681
+  Introduced through: gnupg2/gpgv@2.2.40-1.1, apt@2.6.1
+  From: gnupg2/gpgv@2.2.40-1.1
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2025-4802
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-10180077
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u11
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2025-8058
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-10881529
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u13
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-0861
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-15010810
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u14
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-0915
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-15019110
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u14
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2025-15281
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-15044343
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u14
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: Information Exposure
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-1546991
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-1547039
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-1547069
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: Use of Insufficiently Random Values
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-1547135
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: Out-of-Bounds
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-1547196
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: Resource Management Errors
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-1547293
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2019-1010023
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-1547373
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-4438
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-15754000
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u14
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-4437
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-15754013
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u14
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-4046
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-15878848
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u14
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-5928
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-16115569
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-16115572
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-6238
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-16325151
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-5435
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-16325159
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-6791
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-18605785
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-6368
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-18612528
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-19542
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-19233589
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-19499
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-19269959
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-77117
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-19339204
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-18374
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-19383359
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-80489
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-19402191
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-89092
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-19684419
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-8674
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-19885968
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-86805
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-20046936
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-95818
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-20046938
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-97399
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-20197707
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-84243
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-22083456
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-115819
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-22422865
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2026-100290
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-22422866
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in glibc/libc-bin
+  Description: CVE-2025-0395
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GLIBC-8658672
+  Introduced through: glibc/libc-bin@2.36-9+deb12u9, glibc/libc6@2.36-9+deb12u9
+  From: glibc/libc-bin@2.36-9+deb12u9
+  From: glibc/libc6@2.36-9+deb12u9
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.36-9+deb12u10
+
+Ô£ù Low severity vulnerability found in gcc-12/libstdc++6
+  Description: Expired Pointer Dereference
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-20335536
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gcc-12/libstdc++6
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-20386244
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gcc-12/libstdc++6
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-22119287
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gcc-12/libstdc++6
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-22119309
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gcc-12/libstdc++6
+  Description: Out-of-bounds Read
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-22281504
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in gcc-12/libstdc++6
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-2606941
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in dpkg
+  Description: CVE-2025-6297
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-DPKG-10566855
+  Introduced through: dash@0.5.12-2, grep@3.8-5, gzip@1.12-1, perl/perl-base@5.36.0-7+deb12u1, readline/libreadline8@8.2-1.3
+  From: dash@0.5.12-2 > dpkg@1.21.22
+  From: grep@3.8-5 > dpkg@1.21.22
+  From: gzip@1.12-1 > dpkg@1.21.22
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.21.23
+
+Ô£ù Low severity vulnerability found in dpkg
+  Description: CVE-2026-2219
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-DPKG-15426435
+  Introduced through: dash@0.5.12-2, grep@3.8-5, gzip@1.12-1, perl/perl-base@5.36.0-7+deb12u1, readline/libreadline8@8.2-1.3
+  From: dash@0.5.12-2 > dpkg@1.21.22
+  From: grep@3.8-5 > dpkg@1.21.22
+  From: gzip@1.12-1 > dpkg@1.21.22
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.21.23
+
+Ô£ù Low severity vulnerability found in dpkg
+  Description: CVE-2026-91094
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-DPKG-22528060
+  Introduced through: dash@0.5.12-2, grep@3.8-5, gzip@1.12-1, perl/perl-base@5.36.0-7+deb12u1, readline/libreadline8@8.2-1.3
+  From: dash@0.5.12-2 > dpkg@1.21.22
+  From: grep@3.8-5 > dpkg@1.21.22
+  From: gzip@1.12-1 > dpkg@1.21.22
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in diffutils
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-DIFFUTILS-18235272
+  Introduced through: diffutils@1:3.8-4
+  From: diffutils@1:3.8-4
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in dash
+  Description: Inefficient Regular Expression Complexity
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-DASH-20335457
+  Introduced through: dash@0.5.12-2
+  From: dash@0.5.12-2
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in dash
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-DASH-20335462
+  Introduced through: dash@0.5.12-2
+  From: dash@0.5.12-2
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in coreutils
+  Description: Stack-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-COREUTILS-10259258
+  Introduced through: coreutils@9.1-1
+  From: coreutils@9.1-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in coreutils
+  Description: Improper Input Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-COREUTILS-1543939
+  Introduced through: coreutils@9.1-1
+  From: coreutils@9.1-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in coreutils
+  Description: Race Condition
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-COREUTILS-1543947
+  Introduced through: coreutils@9.1-1
+  From: coreutils@9.1-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in coreutils
+  Description: Heap-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-COREUTILS-18299905
+  Introduced through: coreutils@9.1-1
+  From: coreutils@9.1-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in coreutils
+  Description: Out-of-bounds Read
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-COREUTILS-18299908
+  Introduced through: coreutils@9.1-1
+  From: coreutils@9.1-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in bzip2/libbz2-1.0
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-BZIP2-17099854
+  Introduced through: bzip2/libbz2-1.0@1.0.8-5+b1, apt@2.6.1, adduser@3.134, readline/libreadline8@8.2-1.3
+  From: bzip2/libbz2-1.0@1.0.8-5+b1
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > bzip2/libbz2-1.0@1.0.8-5+b1
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1 > bzip2/libbz2-1.0@1.0.8-5+b1
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in attr/libattr1
+  Description: Link Following
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-ATTR-17678193
+  Introduced through: attr/libattr1@1:2.5.1-4, coreutils@9.1-1
+  From: attr/libattr1@1:2.5.1-4
+  From: coreutils@9.1-1 > attr/libattr1@1:2.5.1-4
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in apt/libapt-pkg6.0
+  Description: Improper Verification of Cryptographic Signature
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-APT-1541449
+  Introduced through: apt/libapt-pkg6.0@2.6.1, apt@2.6.1
+  From: apt/libapt-pkg6.0@2.6.1
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1
+  From: apt@2.6.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in apt/libapt-pkg6.0
+  Description: CVE-2026-109518
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-APT-22204046
+  Introduced through: apt/libapt-pkg6.0@2.6.1, apt@2.6.1
+  From: apt/libapt-pkg6.0@2.6.1
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1
+  From: apt@2.6.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.6.2
+
+Ô£ù Low severity vulnerability found in acl/libacl1
+  Description: Time-of-check Time-of-use (TOCTOU)
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-ACL-17677867
+  Introduced through: coreutils@9.1-1, sed@4.9-1, readline/libreadline8@8.2-1.3
+  From: coreutils@9.1-1 > acl/libacl1@2.3.1-3
+  From: sed@4.9-1 > acl/libacl1@2.3.1-3
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > acl/libacl1@2.3.1-3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Low severity vulnerability found in acl/libacl1
+  Description: Link Following
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-ACL-17677870
+  Introduced through: coreutils@9.1-1, sed@4.9-1, readline/libreadline8@8.2-1.3
+  From: coreutils@9.1-1 > acl/libacl1@2.3.1-3
+  From: sed@4.9-1 > acl/libacl1@2.3.1-3
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > acl/libacl1@2.3.1-3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in xz-utils/liblzma5
+  Description: Heap-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-XZUTILS-15895807
+  Introduced through: xz-utils/liblzma5@5.4.1-0.2, apt@2.6.1, readline/libreadline8@8.2-1.3
+  From: xz-utils/liblzma5@5.4.1-0.2
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > xz-utils/liblzma5@5.4.1-0.2
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1 > xz-utils/liblzma5@5.4.1-0.2
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.4.1-1+deb12u1
+
+Ô£ù Medium severity vulnerability found in util-linux/libblkid1
+  Description: Authentication Bypass
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-15358021
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in util-linux/libblkid1
+  Description: Use After Free
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-17690420
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in systemd/libsystemd0
+  Description: Race Condition
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-10264074
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 252.38-1~deb12u1
+
+Ô£ù Medium severity vulnerability found in systemd/libsystemd0
+  Description: Improper Access Control
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SYSTEMD-15656988
+  Introduced through: systemd/libsystemd0@252.31-1~deb12u1, apt@2.6.1, util-linux@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2, systemd/libudev1@252.31-1~deb12u1
+  From: systemd/libsystemd0@252.31-1~deb12u1
+  From: apt@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > systemd/libsystemd0@252.31-1~deb12u1
+  and 5 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 252.39-1~deb12u2
+
+Ô£ù Medium severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Use After Free
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119062
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Use After Free
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119063
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119066
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119082
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Use of Uninitialized Resource
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119093
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119096
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in shadow/passwd
+  Description: Improper Authentication
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SHADOW-5879156
+  Introduced through: shadow/passwd@1:4.13+dfsg1-1+b1, adduser@3.134, shadow/login@1:4.13+dfsg1-1+b1
+  From: shadow/passwd@1:4.13+dfsg1-1+b1
+  From: adduser@3.134 > shadow/passwd@1:4.13+dfsg1-1+b1
+  From: shadow/login@1:4.13+dfsg1-1+b1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1:4.13+dfsg1-1+deb12u1
+
+Ô£ù Medium severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Out-of-bounds Read
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PCRE2-19685511
+  Introduced through: grep@3.8-5, readline/libreadline8@8.2-1.3
+  From: grep@3.8-5 > pcre2/libpcre2-8-0@10.42-1
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > libselinux/libselinux1@3.4-1+b6 > pcre2/libpcre2-8-0@10.42-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 10.42-1+deb12u1
+
+Ô£ù Medium severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PCRE2-19685520
+  Introduced through: grep@3.8-5, readline/libreadline8@8.2-1.3
+  From: grep@3.8-5 > pcre2/libpcre2-8-0@10.42-1
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > libselinux/libselinux1@3.4-1+b6 > pcre2/libpcre2-8-0@10.42-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 10.42-1+deb12u1
+
+Ô£ù Medium severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Out-of-bounds Read
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PCRE2-19685525
+  Introduced through: grep@3.8-5, readline/libreadline8@8.2-1.3
+  From: grep@3.8-5 > pcre2/libpcre2-8-0@10.42-1
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > libselinux/libselinux1@3.4-1+b6 > pcre2/libpcre2-8-0@10.42-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 10.42-1+deb12u1
+
+Ô£ù Medium severity vulnerability found in pam/libpam0g
+  Description: CVE-2024-22365
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PAM-6178914
+  Introduced through: pam/libpam0g@1.5.2-6+deb12u1, shadow/login@1:4.13+dfsg1-1+b1, util-linux@2.38.1-5+deb12u2, adduser@3.134, pam/libpam-modules-bin@1.5.2-6+deb12u1, pam/libpam-modules@1.5.2-6+deb12u1, pam/libpam-runtime@1.5.2-6+deb12u1
+  From: pam/libpam0g@1.5.2-6+deb12u1
+  From: shadow/login@1:4.13+dfsg1-1+b1 > pam/libpam0g@1.5.2-6+deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > pam/libpam0g@1.5.2-6+deb12u1
+  and 11 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.5.2-6+deb12u2
+
+Ô£ù Medium severity vulnerability found in libtirpc/libtirpc-common
+  Description: Excessive Platform Resource Consumption within a Loop
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBTIRPC-21174938
+  Introduced through: libnsl/libnsl2@1.3.0-2, libtirpc/libtirpc3@1.3.3+ds-1
+  From: libnsl/libnsl2@1.3.0-2 > libtirpc/libtirpc3@1.3.3+ds-1 > libtirpc/libtirpc-common@1.3.3+ds-1
+  From: libtirpc/libtirpc3@1.3.3+ds-1
+  From: libnsl/libnsl2@1.3.0-2 > libtirpc/libtirpc3@1.3.3+ds-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in libtirpc/libtirpc-common
+  Description: Allocation of Resources Without Limits or Throttling
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBTIRPC-21174969
+  Introduced through: libnsl/libnsl2@1.3.0-2, libtirpc/libtirpc3@1.3.3+ds-1
+  From: libnsl/libnsl2@1.3.0-2 > libtirpc/libtirpc3@1.3.3+ds-1 > libtirpc/libtirpc-common@1.3.3+ds-1
+  From: libtirpc/libtirpc3@1.3.3+ds-1
+  From: libnsl/libnsl2@1.3.0-2 > libtirpc/libtirpc3@1.3.3+ds-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in libtasn1-6
+  Description: Algorithmic Complexity
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBTASN16-8689970
+  Introduced through: libtasn1-6@4.19.0-2, apt@2.6.1
+  From: libtasn1-6@4.19.0-2
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3 > libtasn1-6@4.19.0-2
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 4.19.0-2+deb12u1
+
+Ô£ù Medium severity vulnerability found in krb5/libkrb5support0
+  Description: Missing Release of Resource after Effective Lifetime
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398900
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in krb5/libkrb5support0
+  Description: Missing Release of Resource after Effective Lifetime
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398904
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in krb5/libkrb5support0
+  Description: Allocation of Resources Without Limits or Throttling
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398908
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in krb5/libkrb5support0
+  Description: Missing Release of Resource after Effective Lifetime
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398920
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in krb5/libkrb5support0
+  Description: NULL Pointer Dereference
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398923
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in krb5/libkrb5support0
+  Description: Memory Leak
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-6277421
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.20.1-2+deb12u3
+
+Ô£ù Medium severity vulnerability found in krb5/libkrb5support0
+  Description: Reversible One-Way Hash
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-9712315
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.20.1-2+deb12u4
+
+Ô£ù Medium severity vulnerability found in gnutls28/libgnutls30
+  Description: NULL Pointer Dereference
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-10690990
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u5
+
+Ô£ù Medium severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-10690993
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u5
+
+Ô£ù Medium severity vulnerability found in gnutls28/libgnutls30
+  Description: Stack-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-14082350
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u6
+
+Ô£ù Medium severity vulnerability found in gnutls28/libgnutls30
+  Description: Algorithmic Complexity
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-15251132
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u6
+
+Ô£ù Medium severity vulnerability found in gnutls28/libgnutls30
+  Description: Expired Pointer Dereference
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344301
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù Medium severity vulnerability found in gnutls28/libgnutls30
+  Description: Off-by-one Error
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344319
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù Medium severity vulnerability found in gnutls28/libgnutls30
+  Description: Algorithmic Complexity
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-8705121
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u4
+
+Ô£ù Medium severity vulnerability found in gcc-12/libstdc++6
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-22564630
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Medium severity vulnerability found in gcc-12/libstdc++6
+  Description: CVE-2023-4039
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GCC12-5901316
+  Introduced through: gcc-12/libstdc++6@12.2.0-14, apt@2.6.1, gcc-12/gcc-12-base@12.2.0-14, gcc-12/libgcc-s1@12.2.0-14
+  From: gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > gcc-12/libstdc++6@12.2.0-14
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 12.2.0-14+deb12u1
+
+Ô£ù High severity vulnerability found in zlib/zlib1g
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-ZLIB-19520487
+  Introduced through: zlib/zlib1g@1:1.2.13.dfsg-1, util-linux@2.38.1-5+deb12u2, apt@2.6.1, readline/libreadline8@8.2-1.3
+  From: zlib/zlib1g@1:1.2.13.dfsg-1
+  From: util-linux@2.38.1-5+deb12u2 > zlib/zlib1g@1:1.2.13.dfsg-1
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > zlib/zlib1g@1:1.2.13.dfsg-1
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in zlib/zlib1g
+  Description: Directory Traversal
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-ZLIB-22249551
+  Introduced through: zlib/zlib1g@1:1.2.13.dfsg-1, util-linux@2.38.1-5+deb12u2, apt@2.6.1, readline/libreadline8@8.2-1.3
+  From: zlib/zlib1g@1:1.2.13.dfsg-1
+  From: util-linux@2.38.1-5+deb12u2 > zlib/zlib1g@1:1.2.13.dfsg-1
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > zlib/zlib1g@1:1.2.13.dfsg-1
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in util-linux/libblkid1
+  Description: Time-of-check Time-of-use (TOCTOU)
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-UTILLINUX-19513290
+  Introduced through: util-linux/libblkid1@2.38.1-5+deb12u2, e2fsprogs@1.47.0-2, util-linux/libmount1@2.38.1-5+deb12u2, util-linux@2.38.1-5+deb12u2, util-linux/mount@2.38.1-5+deb12u2, util-linux/libuuid1@2.38.1-5+deb12u2, util-linux/libsmartcols1@2.38.1-5+deb12u2, util-linux/util-linux-extra@2.38.1-5+deb12u2, util-linux/bsdutils@1:2.38.1-5+deb12u2
+  From: util-linux/libblkid1@2.38.1-5+deb12u2
+  From: e2fsprogs@1.47.0-2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  From: util-linux/libmount1@2.38.1-5+deb12u2 > util-linux/libblkid1@2.38.1-5+deb12u2
+  and 17 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in sqlite3/libsqlite3-0
+  Description: CVE-2025-6965
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-10753055
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.40.1-2+deb12u2
+
+Ô£ù High severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119067
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119078
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in sqlite3/libsqlite3-0
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-SQLITE3-22119079
+  Introduced through: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  From: sqlite3/libsqlite3-0@3.40.1-2+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in perl/perl-base
+  Description: CVE-2026-42497
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17037435
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù High severity vulnerability found in perl/perl-base
+  Description: CVE-2026-57432
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17960069
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù High severity vulnerability found in perl/perl-base
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-5489190
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u3
+
+Ô£ù High severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PCRE2-19685519
+  Introduced through: grep@3.8-5, readline/libreadline8@8.2-1.3
+  From: grep@3.8-5 > pcre2/libpcre2-8-0@10.42-1
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > libselinux/libselinux1@3.4-1+b6 > pcre2/libpcre2-8-0@10.42-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 10.42-1+deb12u1
+
+Ô£ù High severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Free of Memory not on the Heap
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PCRE2-19685535
+  Introduced through: grep@3.8-5, readline/libreadline8@8.2-1.3
+  From: grep@3.8-5 > pcre2/libpcre2-8-0@10.42-1
+  From: readline/libreadline8@8.2-1.3 > readline/readline-common@8.2-1.3 > dpkg@1.21.22 > tar@1.34+dfsg-1.2+deb12u1 > libselinux/libselinux1@3.4-1+b6 > pcre2/libpcre2-8-0@10.42-1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 10.42-1+deb12u1
+
+Ô£ù High severity vulnerability found in pam/libpam0g
+  Description: Directory Traversal
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PAM-10378969
+  Introduced through: pam/libpam0g@1.5.2-6+deb12u1, shadow/login@1:4.13+dfsg1-1+b1, util-linux@2.38.1-5+deb12u2, adduser@3.134, pam/libpam-modules-bin@1.5.2-6+deb12u1, pam/libpam-modules@1.5.2-6+deb12u1, pam/libpam-runtime@1.5.2-6+deb12u1
+  From: pam/libpam0g@1.5.2-6+deb12u1
+  From: shadow/login@1:4.13+dfsg1-1+b1 > pam/libpam0g@1.5.2-6+deb12u1
+  From: util-linux@2.38.1-5+deb12u2 > pam/libpam0g@1.5.2-6+deb12u1
+  and 11 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in openssl/libssl3
+  Description: CVE-2025-69421
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15123192
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.18-1~deb12u2
+
+Ô£ù High severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-28388
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15969313
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.19-1~deb12u2
+
+Ô£ù High severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-28390
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15969319
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.19-1~deb12u2
+
+Ô£ù High severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-28387
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15969321
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.19-1~deb12u2
+
+Ô£ù High severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-28389
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15969324
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.19-1~deb12u2
+
+Ô£ù High severity vulnerability found in libcap2
+  Description: Time-of-check Time-of-use (TOCTOU)
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-LIBCAP2-15960211
+  Introduced through: libcap2@1:2.66-4, apt@2.6.1
+  From: libcap2@1:2.66-4
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > systemd/libsystemd0@252.31-1~deb12u1 > libcap2@1:2.66-4
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1:2.66-4+deb12u3
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: NULL Pointer Dereference
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-16334223
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.20.1-2+deb12u5
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: Integer Underflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-16334233
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 1.20.1-2+deb12u5
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: Missing Release of Resource after Effective Lifetime
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22384442
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: Missing Release of Resource after Effective Lifetime
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22384444
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: Incorrect Behavior Order: Early Amplification
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22384455
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: Allocation of Resources Without Limits or Throttling
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22384457
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: Missing Release of Resource after Effective Lifetime
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398886
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in krb5/libkrb5support0
+  Description: Missing Release of Resource after Effective Lifetime
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-KRB5-22398926
+  Introduced through: krb5/libkrb5support0@1.20.1-2+deb12u2, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2, krb5/libk5crypto3@1.20.1-2+deb12u2, krb5/libkrb5-3@1.20.1-2+deb12u2, libnsl/libnsl2@1.3.0-2
+  From: krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libk5crypto3@1.20.1-2+deb12u2 > krb5/libkrb5support0@1.20.1-2+deb12u2
+  and 8 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Heap-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-10690985
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u5
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Double Free
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-10690987
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u5
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Handling of Case Sensitivity
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344297
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344322
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Handling of Length Parameter Inconsistency
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344333
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Validation of Specified Quantity in Input
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344335
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Undefined Behavior for Input to API
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344340
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Validation of Specified Quantity in Input
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344348
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù High severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344358
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù High severity vulnerability found in gnupg2/gpgv
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUPG2-14723302
+  Introduced through: gnupg2/gpgv@2.2.40-1.1, apt@2.6.1
+  From: gnupg2/gpgv@2.2.40-1.1
+  From: apt@2.6.1 > gnupg2/gpgv@2.2.40-1.1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 2.2.40-1.1+deb12u2
+
+Ô£ù Critical severity vulnerability found in zlib/zlib1g
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-ZLIB-6008963
+  Introduced through: zlib/zlib1g@1:1.2.13.dfsg-1, util-linux@2.38.1-5+deb12u2, apt@2.6.1, readline/libreadline8@8.2-1.3
+  From: zlib/zlib1g@1:1.2.13.dfsg-1
+  From: util-linux@2.38.1-5+deb12u2 > zlib/zlib1g@1:1.2.13.dfsg-1
+  From: apt@2.6.1 > apt/libapt-pkg6.0@2.6.1 > zlib/zlib1g@1:1.2.13.dfsg-1
+  and 2 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+
+Ô£ù Critical severity vulnerability found in perl/perl-base
+  Description: CVE-2026-8376
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-16896235
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Critical severity vulnerability found in perl/perl-base
+  Description: CVE-2026-42496
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17037370
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Critical severity vulnerability found in perl/perl-base
+  Description: CVE-2026-13221
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-PERL-17960064
+  Introduced through: perl/perl-base@5.36.0-7+deb12u1
+  From: perl/perl-base@5.36.0-7+deb12u1
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 5.36.0-7+deb12u4
+
+Ô£ù Critical severity vulnerability found in openssl/libssl3
+  Description: CVE-2026-31789
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-OPENSSL-15969314
+  Introduced through: openssl/libssl3@3.0.15-1~deb12u1, ca-certificates@20230311, krb5/libgssapi-krb5-2@1.20.1-2+deb12u2
+  From: openssl/libssl3@3.0.15-1~deb12u1
+  From: ca-certificates@20230311 > openssl@3.0.15-1~deb12u1 > openssl/libssl3@3.0.15-1~deb12u1
+  From: krb5/libgssapi-krb5-2@1.20.1-2+deb12u2 > krb5/libkrb5-3@1.20.1-2+deb12u2 > openssl/libssl3@3.0.15-1~deb12u1
+  and 1 more...
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.0.19-1~deb12u2
+
+Ô£ù Critical severity vulnerability found in gnutls28/libgnutls30
+  Description: Improper Null Termination
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344303
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+Ô£ù Critical severity vulnerability found in gnutls28/libgnutls30
+  Description: Integer Underflow
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN12-GNUTLS28-16344325
+  Introduced through: gnutls28/libgnutls30@3.7.9-2+deb12u3, apt@2.6.1
+  From: gnutls28/libgnutls30@3.7.9-2+deb12u3
+  From: apt@2.6.1 > gnutls28/libgnutls30@3.7.9-2+deb12u3
+  Image layer: Introduced by your base image (python:3.12.7-slim-bookworm)
+  Fixed in: 3.7.9-2+deb12u7
+
+
+
+Organization:      juanalopez1
+Package manager:   deb
+Target file:       Dockerfile
+Project name:      docker-image|todo-app
+Docker image:      todo-app:1.0.0
+Platform:          linux/amd64
+Target OS:         Debian GNU/Linux 12 (bookworm)
+Base image:        python:3.12.7-slim-bookworm
+Licenses:          enabled
+
+Tested 105 dependencies for known issues, found 267 issues.
+
+Base Image                   Vulnerabilities  Severity
+python:3.12.7-slim-bookworm  267              7 critical, 37 high, 35 medium, 188 low
+
+Recommendations for base image upgrade:
+
+Minor upgrades
+Base Image                   Vulnerabilities  Severity
+python:3.15.2-slim-bookworm  127              1 critical, 7 high, 9 medium, 110 low
+
+Alternative image types
+Base Image                  Vulnerabilities  Severity
+python:3.16-rc-slim-trixie  89               0 critical, 2 high, 2 medium, 85 low
+python:3.16-rc-alpine3.24   0                0 critical, 0 high, 0 medium, 0 low
+
+
+Pro tip: use `--exclude-base-image-vulns` to exclude from display Docker base image vulnerabilities.
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
+
+Learn more: https://docs.snyk.io/products/snyk-container/getting-around-the-snyk-container-ui/base-image-detection
+
+

@@ -1,6 +1,6 @@
 # ---------- Etapa 1: builder ----------
 # Instala las dependencias en una carpeta aparte (/install)
-FROM python:3.12.7-slim-bookworm AS builder
+FROM python:3.15.2-slim-bookworm AS builder
 
 WORKDIR /app
 COPY requirements.txt .
@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 # ---------- Etapa 2: runtime ----------
 # Imagen final: solo Python + dependencias ya instaladas + nuestro código
-FROM python:3.12.7-slim-bookworm
+FROM python:3.15.2-slim-bookworm
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
