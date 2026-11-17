@@ -1,0 +1,12 @@
+# Pipelines declarativos (Jenkinsfile)
+workflow-aggregator
+# Clonar el repositorio desde Git
+git
+# Usar credenciales (Docker Hub, Snyk, kubeconfig) dentro del pipeline
+credentials-binding
+# Vista de etapas del pipeline
+pipeline-stage-view
+# Hora en cada línea del log
+timestamper
+# Limpiar el workspace al terminar
+ws-cleanup

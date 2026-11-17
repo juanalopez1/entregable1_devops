@@ -1,0 +1,14 @@
+# Política de Snyk para la imagen todo-app (Flask).
+# Documenta las vulnerabilidades críticas aceptadas (ver reports/image-analysis.md).
+# El pipeline corta ante cualquier otra vulnerabilidad crítica.
+version: v1.25.0
+ignore:
+  SNYK-DEBIAN12-ZLIB-6008963:
+    - '*':
+        reason: >-
+          Paquete zlib1g de Debian 12 (imagen base python:3.15.2-slim-bookworm)
+          sin parche disponible en Debian. La aplicación no usa zlib directamente,
+          corre como usuario no root. Se revisa al migrar a Debian 13.
+        expires: 2027-02-28T00:00:00.000Z
+        created: 2026-11-17T00:00:00.000Z
+patch: {}
