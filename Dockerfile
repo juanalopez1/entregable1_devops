@@ -13,7 +13,7 @@ FROM python:3.15.2-slim-bookworm
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# Usuario sin privilegios, con UID numérico
+# Usuario sin privilegios, con UID/GID numérico
 RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin appuser
 
 WORKDIR /app
@@ -22,11 +22,13 @@ WORKDIR /app
 COPY --from=builder /install /usr/local
 
 # Copiamos solo lo que la app necesita para correr
-COPY --chown=appuser:appuser app.py .
+COPY --chown=appuser:appuser app.py monitor_client.py ./
 COPY --chown=appuser:appuser templates ./templates
 
-USER 10001
-
+# Indica que Flask usa el puerto 5000
 EXPOSE 5000
+
+# El proceso corre como usuario y grupo no root
+USER 10001:10001
 
 CMD ["python", "app.py"]

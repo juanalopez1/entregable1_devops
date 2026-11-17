@@ -5,6 +5,7 @@ venv
 .git
 .gitignore
 k8s
+monitor
 helm-chart
 reports
 grafana
@@ -14,5 +15,3 @@ Jenkinsfile
 README.md
 Dockerfile
 .dockerignore
-monitor
-k8s
