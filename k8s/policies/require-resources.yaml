@@ -3,6 +3,7 @@ kind: ClusterPolicy
 metadata:
   name: require-container-resources
 spec:
+  # Es el esquema de ClusterPolicy de Kyverno, no el spec de un Pod.
   validationFailureAction: Enforce
   background: true
   rules:
@@ -12,9 +13,16 @@ spec:
           - resources:
               kinds:
                 - Pod
+      # Falco's node-level components use host resources outside app workloads.
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - falco
       validate:
         message: "Todos los contenedores deben definir requests y limits de CPU y memoria."
         pattern:
+          # nosemgrep: yaml.kubernetes.security.run-as-non-root.run-as-non-root
           spec:
             containers:
               - resources:

@@ -1,2 +1,12 @@
-PENDIENTE: KubeLinter no está instalado en el entorno revisado.
-Comando sugerido: kube-linter lint k8s --format plain
+KubeLinter 0.8.3
+
+/src/k8s/noncompliant-pod.yaml: (object: default/kyverno-negative-test /v1, Kind=Pod) The container "test" is using an invalid container image, "nginx:latest". Please use images that are not blocked by the `BlockList` criteria : [".*:(latest)$" "^[^:]*$" "(.*/[^:]+)$"] (check: latest-tag, remediation: Use a container image with a specific tag other than latest.)
+
+/src/k8s/noncompliant-pod.yaml: (object: default/kyverno-negative-test /v1, Kind=Pod) container "test" does not have a read-only root file system (check: no-read-only-root-fs, remediation: Set readOnlyRootFilesystem to true in the container securityContext.)
+
+/src/k8s/noncompliant-pod.yaml: (object: default/kyverno-negative-test /v1, Kind=Pod) container "test" is not set to runAsNonRoot (check: run-as-non-root, remediation: Set runAsUser to a non-zero number and runAsNonRoot to true in your pod or container securityContext. Refer to https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ for details.)
+
+/src/k8s/noncompliant-pod.yaml: (object: default/kyverno-negative-test /v1, Kind=Pod) container "test" has cpu request 0 (check: unset-cpu-requirements, remediation: Set CPU requests for your container based on its requirements. Refer to https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits for details.)
+
+/src/k8s/noncompliant-pod.yaml: (object: default/kyverno-negative-test /v1, Kind=Pod) container "test" has memory limit 0 (check: unset-memory-requirements, remediation: Set memory limits for your container based on its requirements. Refer to https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits for details.)
+

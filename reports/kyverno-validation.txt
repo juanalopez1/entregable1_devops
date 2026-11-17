@@ -1,0 +1,26 @@
+Validación de políticas Kyverno
+
+Clúster: Minikube, Kubernetes v1.35.1
+Kyverno: v1.19.2
+Estado: las tres ClusterPolicy aparecen Ready.
+
+Políticas aplicadas:
+- disallow-latest-tag
+- disallow-root-containers
+- require-container-resources
+
+Comando de prueba:
+kubectl apply -f k8s/noncompliant-pod.yaml
+
+Resultado: Kubernetes rechazó el Pod kyverno-negative-test durante la admisión con el webhook validate.kyverno.svc-fail.
+
+Mensajes de rechazo:
+- disallow-latest-tag: No se permite usar imágenes con la etiqueta latest.
+- disallow-root-containers: Los pods deben ejecutarse como usuario no root.
+- require-container-resources: Todos los contenedores deben definir requests y limits de CPU y memoria.
+
+Comprobación posterior:
+kubectl get pod kyverno-negative-test
+Resultado: NotFound; el Pod no fue creado.
+
+Nota: Kyverno v1.19.2 acepta estas ClusterPolicy, pero advierte que el tipo kyverno.io/v1 ClusterPolicy está deprecado y recomienda migrar a las nuevas APIs de políticas en futuras actualizaciones.

@@ -1,6 +1,11 @@
 # agarrar imagen de python
 FROM python:3.12-slim
 
+# Aplica las actualizaciones de seguridad disponibles en Debian al construir la imagen.
+RUN apt-get update \
+    && apt-get upgrade -y --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
 # crea/usa /app dentro del contenedor.
 WORKDIR /app
 

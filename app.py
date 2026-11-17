@@ -1,6 +1,12 @@
+import os
+import secrets
+
 from flask import Flask, render_template, request, redirect, url_for
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY") or secrets.token_hex(32)
+CSRFProtect(app)
 
 tasks = []
 next_id = 1
@@ -54,4 +60,6 @@ def delete_task(task_id):
 
 
 if __name__ == "__main__":
+    # El contenedor debe escuchar en todas sus interfaces; Docker/Kubernetes limita la exposición de red.
+    # nosemgrep: python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host
     app.run(host="0.0.0.0", port=5000)
