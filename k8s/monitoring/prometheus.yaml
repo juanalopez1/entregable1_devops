@@ -1,0 +1,106 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: prometheus-config
+
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
+      evaluation_interval: 15s
+
+    alerting:
+      alertmanagers:
+        - static_configs:
+            - targets:
+                - alertmanager-service:9093
+
+    rule_files:
+      - /etc/prometheus/alerts.yml
+
+    scrape_configs:
+      - job_name: todo-monitor
+        metrics_path: /actuator/prometheus
+        static_configs:
+          - targets:
+              - monitor-service:8080
+
+  alerts.yml: |
+    groups:
+      - name: todo-operations
+        rules:
+          - alert: TooManyTaskCreations
+            expr: sum(increase(todo_operations_total{operation="create"}[5m])) > 10
+            for: 15s
+            labels:
+              severity: warning
+            annotations:
+              summary: Se superó el umbral de creaciones de tareas
+              description: Más de 10 creaciones de tareas en los últimos 5 minutos.
+
+          - alert: TooManyHighPriorityCreations
+            expr: sum(increase(todo_operations_total{operation="create",priority="alta"}[5m])) > 5
+            for: 15s
+            labels:
+              severity: warning
+            annotations:
+              summary: Se superó el umbral de tareas de prioridad alta
+              description: Más de 5 creaciones de prioridad alta en los últimos 5 minutos.
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: prometheus
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: prometheus
+
+  template:
+    metadata:
+      labels:
+        app: prometheus
+
+    spec:
+      containers:
+        - name: prometheus
+          image: prom/prometheus:v2.55.1
+
+          args:
+            - --config.file=/etc/prometheus/prometheus.yml
+            - --storage.tsdb.path=/prometheus
+            - --web.enable-lifecycle
+
+          ports:
+            - containerPort: 9090
+
+          volumeMounts:
+            - name: prometheus-config
+              mountPath: /etc/prometheus
+
+      volumes:
+        - name: prometheus-config
+          configMap:
+            name: prometheus-config
+---
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: prometheus-service
+
+spec:
+  selector:
+    app: prometheus
+
+  ports:
+    - protocol: TCP
+      port: 9090
+      targetPort: 9090
+
+  type: NodePort

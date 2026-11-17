@@ -26,3 +26,9 @@ spec:
 
           ports:
             - containerPort: 5000
+
+          env:
+            - name: MONITOR_URL
+              value: http://monitor-service:8080/api/operations
+            - name: APP_VERSION
+              value: blue
