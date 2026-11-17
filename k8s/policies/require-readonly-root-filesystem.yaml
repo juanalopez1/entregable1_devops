@@ -13,11 +13,17 @@ spec:
               kinds:
                 - Pod
       # Falco necesita inspeccionar el host; las cargas de aplicación siguen sujetas a la política.
+      # Herramientas de infraestructura (charts oficiales) que necesitan permisos
+      # especiales; las cargas de la aplicación siguen sujetas a la política.
       exclude:
         any:
           - resources:
               namespaces:
                 - falco
+                - monitoring
+                - ingress-nginx
+                - kyverno
+                - kube-system
       validate:
         message: "Todos los contenedores deben tener readOnlyRootFilesystem: true."
         pattern:

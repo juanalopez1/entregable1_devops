@@ -13,12 +13,17 @@ spec:
           - resources:
               kinds:
                 - Pod
-      # Falco's node-level components use host resources outside app workloads.
+            # Herramientas de infraestructura (charts oficiales) que necesitan permisos
+      # especiales; las cargas de la aplicación siguen sujetas a la política.
       exclude:
         any:
           - resources:
               namespaces:
                 - falco
+                - monitoring
+                - ingress-nginx
+                - kyverno
+                - kube-system
       validate:
         message: "Todos los contenedores deben definir requests y limits de CPU y memoria."
         pattern:
