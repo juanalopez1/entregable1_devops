@@ -1,0 +1,21 @@
+# Entorno de desarrollo (Minikube): 1 réplica y pocos recursos
+environment: dev
+
+replicaCount: 1
+
+image:
+  repository: todo-app
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: true
+  className: nginx
+  host: todo.local
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi

@@ -1,0 +1,69 @@
+# ============================================================
+# Valores por defecto de la chart todo-app.
+# Se pueden sobrescribir con -f values-dev.yaml / values-prod.yaml
+# o con --set clave=valor.
+# ============================================================
+
+# Nombre del entorno (se muestra en la página junto a la versión)
+environment: default
+
+# Cantidad de pods (copias) de la aplicación
+replicaCount: 1
+
+image:
+  repository: todo-app
+  # Si queda vacío, se usa el appVersion del Chart.yaml
+  tag: ""
+  # IfNotPresent: usa la imagen local si ya existe (la cargamos con minikube image load)
+  pullPolicy: IfNotPresent
+
+# Puerto en el que escucha Flask dentro del contenedor
+containerPort: 5000
+
+service:
+  # ClusterIP: solo accesible dentro del cluster (se expone hacia afuera con el Ingress)
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: nginx
+  host: todo.local
+
+# Variables de entorno extra para la app (se cargan en el ConfigMap)
+config: {}
+
+# Recursos: requests = lo que se reserva; limits = el máximo permitido
+resources:
+  requests:
+    cpu: 100m
+    memory: 64Mi
+  limits:
+    cpu: 250m
+    memory: 128Mi
+
+# Seguridad a nivel de pod
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 10001
+  runAsGroup: 10001
+  seccompProfile:
+    type: RuntimeDefault
+
+# Seguridad a nivel de contenedor
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+
+# Chequeos de salud
+probes:
+  path: /
+  livenessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 10
+  readinessProbe:
+    initialDelaySeconds: 3
+    periodSeconds: 5

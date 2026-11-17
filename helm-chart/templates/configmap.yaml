@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "todo-app.fullname" . }}
+  labels:
+    {{- include "todo-app.labels" . | nindent 4 }}
+data:
+  # Texto que muestra la página: versión de la imagen + entorno
+  APP_VERSION: {{ printf "%s (%s)" (include "todo-app.imageTag" .) .Values.environment | quote }}
+  {{- range $key, $value := .Values.config }}
+  {{ $key }}: {{ $value | quote }}
+  {{- end }}

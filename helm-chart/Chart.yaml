@@ -1,0 +1,10 @@
+apiVersion: v2
+name: todo-app
+description: Helm chart para desplegar la aplicación To-Do (Flask) en Kubernetes
+type: application
+
+# Versión de la chart (cambia cuando se modifican los templates)
+version: 0.1.0
+
+# Versión de la aplicación que despliega (tag de la imagen Docker)
+appVersion: "1.0.1"

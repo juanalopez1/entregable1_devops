@@ -1,0 +1,21 @@
+# Entorno de producción: más réplicas (alta disponibilidad) y más recursos
+environment: prod
+
+replicaCount: 3
+
+image:
+  repository: todo-app
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: true
+  className: nginx
+  host: todo.local
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
