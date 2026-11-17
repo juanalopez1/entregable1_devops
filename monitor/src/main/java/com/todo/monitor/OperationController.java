@@ -4,6 +4,7 @@ import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import jakarta.validation.Valid;
 import java.util.Set;
+import java.util.regex.Pattern;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class OperationController {
 
     private static final Set<String> OPERATIONS = Set.of("create", "complete", "delete");
-    private static final Set<String> VERSIONS = Set.of("blue", "green");
+    // Versión de la app (tag de la imagen, por ejemplo "1.0.3"). Se valida el formato
+    // para que no lleguen valores arbitrarios como label de las métricas.
+    private static final Pattern VERSION = Pattern.compile("^[a-z0-9][a-z0-9._-]{0,31}$");
     private static final Set<String> PRIORITIES = Set.of("none", "baja", "media", "alta");
 
     private final MeterRegistry meterRegistry;
@@ -32,7 +35,7 @@ public class OperationController {
                 ? "none"
                 : normalize(request.priority());
 
-        if (!OPERATIONS.contains(operation) || !VERSIONS.contains(version) || !PRIORITIES.contains(priority)) {
+        if (!OPERATIONS.contains(operation) || !VERSION.matcher(version).matches() || !PRIORITIES.contains(priority)) {
             return ResponseEntity.badRequest().build();
         }
 

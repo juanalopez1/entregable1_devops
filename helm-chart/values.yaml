@@ -47,7 +47,27 @@ resources:
     cpu: 250m
     memory: 128Mi
 
-# Seguridad a nivel de pod
+# ============================================================
+# Componente monitor (Spring Boot): cuenta las operaciones de
+# tareas y las expone a Prometheus en /actuator/prometheus
+# ============================================================
+monitor:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: todo-monitor
+    tag: "1.0.3"
+    pullPolicy: IfNotPresent
+  port: 8080
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+# Seguridad a nivel de pod (se aplica a los dos componentes)
 podSecurityContext:
   runAsNonRoot: true
   runAsUser: 10001
@@ -55,7 +75,7 @@ podSecurityContext:
   seccompProfile:
     type: RuntimeDefault
 
-# Seguridad a nivel de contenedor
+# Seguridad a nivel de contenedor (se aplica a los dos componentes)
 # (runAsNonRoot/runAsUser se repiten acá porque la política de Kyverno los exige en cada contenedor)
 securityContext:
   runAsNonRoot: true

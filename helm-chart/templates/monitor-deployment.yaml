@@ -1,0 +1,57 @@
+{{- if .Values.monitor.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "todo-app.monitor.fullname" . }}
+  labels:
+    {{- include "todo-app.monitor.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.monitor.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "todo-app.monitor.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "todo-app.monitor.labels" . | nindent 8 }}
+    spec:
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: monitor
+          image: "{{ .Values.monitor.image.repository }}:{{ .Values.monitor.image.tag }}"
+          imagePullPolicy: {{ .Values.monitor.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.monitor.port }}
+              protocol: TCP
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          resources:
+            {{- toYaml .Values.monitor.resources | nindent 12 }}
+          # Java tarda en arrancar: startupProbe le da hasta ~2 minutos
+          # antes de que empiecen a correr las otras dos probes
+          startupProbe:
+            httpGet:
+              path: /actuator/health
+              port: http
+            periodSeconds: 5
+            failureThreshold: 24
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http
+            periodSeconds: 10
+          volumeMounts:
+            # El sistema de archivos es de solo lectura; Tomcat necesita /tmp para escribir
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: tmp
+          emptyDir: {}
+{{- end }}

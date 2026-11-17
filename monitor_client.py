@@ -4,7 +4,8 @@ from urllib.error import URLError
 from urllib.request import Request, urlopen
 
 MONITOR_URL = os.environ.get("MONITOR_URL", "")
-APP_VERSION = os.environ.get("APP_VERSION", "blue")
+# Versión que se informa al monitor (en Kubernetes viene del ConfigMap: el tag de la imagen)
+APP_RELEASE = os.environ.get("APP_RELEASE", "dev")
 
 
 def notify(operation, priority="none"):
@@ -15,7 +16,7 @@ def notify(operation, priority="none"):
         {
             "operation": operation,
             "resource": "task",
-            "version": APP_VERSION,
+            "version": APP_RELEASE,
             "priority": priority or "none"
         }
     ).encode("utf-8")

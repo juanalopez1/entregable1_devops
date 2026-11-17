@@ -1,0 +1,18 @@
+{{- if .Values.monitor.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "todo-app.monitor.fullname" . }}
+  labels:
+    {{- include "todo-app.monitor.labels" . | nindent 4 }}
+spec:
+  # Solo accesible dentro del cluster (lo usan Flask y Prometheus)
+  type: ClusterIP
+  selector:
+    {{- include "todo-app.monitor.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: http
+      port: {{ .Values.monitor.port }}
+      targetPort: http
+      protocol: TCP
+{{- end }}

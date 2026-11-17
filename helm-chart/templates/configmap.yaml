@@ -7,6 +7,12 @@ metadata:
 data:
   # Texto que muestra la página: versión de la imagen + entorno
   APP_VERSION: {{ printf "%s (%s)" (include "todo-app.imageTag" .) .Values.environment | quote }}
+  # Versión que se informa al monitor (label "version" de las métricas)
+  APP_RELEASE: {{ include "todo-app.imageTag" . | quote }}
+  {{- if .Values.monitor.enabled }}
+  # URL interna del monitor: Flask le avisa cada operación (crear, completar, borrar)
+  MONITOR_URL: {{ printf "http://%s:%d/api/operations" (include "todo-app.monitor.fullname" .) (int .Values.monitor.port) | quote }}
+  {{- end }}
   {{- range $key, $value := .Values.config }}
   {{ $key }}: {{ $value | quote }}
   {{- end }}
